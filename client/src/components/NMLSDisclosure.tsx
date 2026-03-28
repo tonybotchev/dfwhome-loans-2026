@@ -42,15 +42,15 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
           </a>
         </span>
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>
-          Company NMLS{" "}
+          Loan Factory, Inc. NMLS{"\ "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1761573"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-600"
             style={{ color: accentColor }}
           >
-            #1761573
+            #320841
           </a>
         </span>
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>Texas DSML Licensed</span>
@@ -87,15 +87,15 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
             >
               #114198
             </a>
-            {" "}· Company NMLS{" "}
+            {" "}· Loan Factory, Inc. NMLS{" "}
             <a
-              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1761573"
+              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
               style={{ color: accentColor }}
             >
-              #1761573
+              #320841
             </a>
           </strong>
           {" "}· Texas DSML Licensed · ⊕ Equal Housing Lender
@@ -132,15 +132,15 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
           >
             #114198
           </a>
-          ) is a licensed Mortgage Loan Originator (MLO) sponsored by a licensed mortgage broker. Company NMLS{" "}
+          ) is a licensed Mortgage Loan Originator (MLO) sponsored by Loan Factory, Inc. Company NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1761573"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
             style={{ color: accentColor }}
           >
-            #1761573
+            #320841
           </a>
           . Licensed by the Texas Department of Savings and Mortgage Lending (DSML). DFW Homes &amp; Loans is not a direct lender. All loan products are subject to credit approval, income verification, satisfactory appraisal, and underwriting guidelines. Rates and terms are subject to change without notice and are not guaranteed until locked. Equal Housing Lender. This is not a commitment to lend. All information is provided for educational purposes only.{" "}
           <a
@@ -170,15 +170,15 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
       >
         #114198
       </a>
-      {" "}· Company NMLS{" "}
+      {" "}· Loan Factory, Inc. NMLS{" "}
       <a
-        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/1761573"
+        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
         target="_blank"
         rel="noopener noreferrer"
         className="underline"
         style={{ color: accentColor }}
       >
-        #1761573
+        #320841
       </a>
       {" "}· Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
     </p>

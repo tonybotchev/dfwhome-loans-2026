@@ -165,7 +165,7 @@ export default function Footer() {
       >
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-['Outfit'] text-xs text-center md:text-left" style={{ color: "oklch(0.5 0.02 85)" }}>
-            © {new Date().getFullYear()} DFW Homes & Loans · Tony Botchev, NMLS #114198 · Company NMLS #1761573 · Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
+            © {new Date().getFullYear()} DFW Homes & Loans · Tony Botchev, NMLS #114198 · Sponsored by Loan Factory, Inc. NMLS #320841 · Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.5 0.02 85)" }}>

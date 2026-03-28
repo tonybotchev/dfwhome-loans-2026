@@ -10,6 +10,7 @@ const TONY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663335597871/XWn
 
 const credentials = [
   "NMLS #114198",
+  "Loan Factory, Inc. NMLS #320841",
   "Texas Licensed MLO",
   "Equal Housing Lender",
   "18+ Years Experience",
