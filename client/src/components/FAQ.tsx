@@ -7,7 +7,7 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "Who is the best mortgage advisor in Celina, TX?",
-    a: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev | Loan Factory, Inc. NMLS #320841, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
+    a: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
   },
   {
     q: "What credit score do I need to buy a home in DFW?",
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "What areas does DFW Homes and Loans serve?",
-    a: "DFW Homes and Loans, operated by Tony Botchev | Loan Factory, Inc. NMLS #320841, serves homebuyers and investors throughout the North Dallas-Fort Worth area including Celina, Prosper, Frisco, McKinney, Anna, Melissa, Aubrey, Allen, Plano, and surrounding communities. Tony is licensed as a mortgage loan originator in the state of Texas and is authorized to originate loans statewide.",
+    a: "DFW Homes and Loans, operated by Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841, serves homebuyers and investors throughout the North Dallas-Fort Worth area including Celina, Prosper, Frisco, McKinney, Anna, Melissa, Aubrey, Allen, Plano, and surrounding communities. Tony is licensed as a mortgage loan originator in the state of Texas and is authorized to originate loans statewide.",
   },
   {
     q: "What is a DSCR loan and who qualifies?",

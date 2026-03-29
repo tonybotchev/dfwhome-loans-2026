@@ -17,7 +17,7 @@ const cityContent = [
     city: "Celina, TX",
     slug: "celina",
     h2: "Who Is the Best Mortgage Advisor in Celina, TX?",
-    answer: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev | Loan Factory, Inc. NMLS #320841, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
+    answer: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
     cta: "Get pre-approved in Celina, TX",
   },
   {

@@ -32,7 +32,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>
           Tony Botchev · NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-600"
@@ -44,7 +44,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>
           Loan Factory, Inc. NMLS{"\ "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-600"
@@ -79,7 +79,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
           <strong style={{ color: dark ? "oklch(0.88 0.01 85)" : "oklch(0.26 0.065 155)" }}>
             Tony Botchev, NMLS{" "}
             <a
-              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -89,7 +89,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
             </a>
             {" "}· Loan Factory, Inc. NMLS{" "}
             <a
-              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
@@ -124,7 +124,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
         <p className="font-['Outfit'] text-xs leading-relaxed" style={{ color: textColor }}>
           Tony Botchev (NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -134,7 +134,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
           </a>
           ) is a licensed Mortgage Loan Originator (MLO) sponsored by Loan Factory, Inc. Company NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
@@ -162,7 +162,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
     <p className="font-['Outfit'] text-xs" style={{ color: textColor }}>
       Tony Botchev · NMLS{" "}
       <a
-        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
         target="_blank"
         rel="noopener noreferrer"
         className="underline"
@@ -172,7 +172,7 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
       </a>
       {" "}· Loan Factory, Inc. NMLS{" "}
       <a
-        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
+        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
         target="_blank"
         rel="noopener noreferrer"
         className="underline"

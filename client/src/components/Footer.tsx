@@ -40,7 +40,7 @@ export default function Footer() {
               <div className="font-display text-2xl" style={{ color: "oklch(0.62 0.16 42)" }}>& LOANS</div>
             </div>
             <p className="font-['Outfit'] text-sm leading-relaxed mb-6" style={{ color: "oklch(0.65 0.02 85)" }}>
-              Tony Botchev | Loan Factory, Inc. NMLS #320841. Your trusted mortgage advisor for North DFW families since 2006.
+              Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841. Your trusted mortgage advisor for North DFW families since 2006.
             </p>
             {/* Social */}
             <div className="flex gap-3">
@@ -165,7 +165,7 @@ export default function Footer() {
       >
         <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="font-['Outfit'] text-xs text-center md:text-left" style={{ color: "oklch(0.5 0.02 85)" }}>
-            © {new Date().getFullYear()} DFW Homes & Loans · Tony Botchev | Loan Factory, Inc. NMLS #320841 · Sponsored by Loan Factory, Inc. NMLS #320841 · Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
+            © {new Date().getFullYear()} DFW Homes & Loans · Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841 · Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.5 0.02 85)" }}>
