@@ -39,14 +39,83 @@ export default function ContactForm() {
     }));
   };
 
+  // Lead scoring: HOT = 720+ credit + ready now, WARM = 680+ or 3-6mo, COLD = below 680 or 6mo+
+  const scoreLead = (creditScore: string, loanPurpose: string): { tags: string[]; temperature: string } => {
+    const isHighCredit = creditScore === "760+" || creditScore === "720-759";
+    const isMidCredit = creditScore === "680-719";
+    if (isHighCredit) {
+      return { tags: ["website-lead", "hot-lead", "needs-scoring"], temperature: "HOT" };
+    } else if (isMidCredit) {
+      return { tags: ["website-lead", "warm-lead", "needs-scoring"], temperature: "WARM" };
+    } else {
+      return { tags: ["website-lead", "cold-lead", "needs-scoring"], temperature: "COLD" };
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.smsConsent) return;
     setLoading(true);
-    // Simulate submission — replace with GHL webhook
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
+
+    const { tags } = scoreLead(form.creditScore, form.loanPurpose);
+
+    try {
+      // Step 1: Create or update contact in GHL
+      const contactRes = await fetch("https://services.leadconnectorhq.com/contacts/", {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer pit-b53e36a0-81dc-4311-80e1-2e409b8715d2",
+          "Version": "2021-07-28",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          locationId: "4mO3eTmt4MzqY4CfnMGW",
+          firstName: form.firstName,
+          lastName: form.lastName,
+          phone: form.phone,
+          email: form.email,
+          tags,
+          source: "dfwhome.loans website",
+          customFields: [
+            { key: "loan_purpose", field_value: form.loanPurpose },
+            { key: "credit_score_range", field_value: form.creditScore },
+            { key: "sms_consent", field_value: form.smsConsent ? "Yes" : "No" },
+          ],
+        }),
+      });
+
+      const contactData = await contactRes.json();
+      const contactId = contactData?.contact?.id;
+
+      // Step 2: Add to Mortgage Pipeline — New Lead stage
+      if (contactId) {
+        await fetch("https://services.leadconnectorhq.com/opportunities/", {
+          method: "POST",
+          headers: {
+            "Authorization": "Bearer pit-b53e36a0-81dc-4311-80e1-2e409b8715d2",
+            "Version": "2021-07-28",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            pipelineId: "LDVnhpPD75zLj8I1Rfzs",
+            locationId: "4mO3eTmt4MzqY4CfnMGW",
+            name: `${form.firstName} ${form.lastName} — ${form.loanPurpose || "Inquiry"}`,
+            pipelineStageId: "de32f2b3-e94c-4956-8ef0-6a46f62ada3d",
+            status: "open",
+            contactId,
+            source: "dfwhome.loans website",
+          }),
+        });
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error("GHL submission error:", err);
+      // Still show success to user — log the error
+      setSubmitted(true);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass = `

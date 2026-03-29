@@ -32,13 +32,13 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>
           Tony Botchev · NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
             target="_blank"
             rel="noopener noreferrer"
             className="underline font-600"
             style={{ color: accentColor }}
           >
-            #114198
+            #320841
           </a>
         </span>
         <span className="font-['Outfit'] text-xs" style={{ color: textColor }}>
@@ -79,13 +79,13 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
           <strong style={{ color: dark ? "oklch(0.88 0.01 85)" : "oklch(0.26 0.065 155)" }}>
             Tony Botchev, NMLS{" "}
             <a
-              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
+              href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
               target="_blank"
               rel="noopener noreferrer"
               className="underline"
               style={{ color: accentColor }}
             >
-              #114198
+              #320841
             </a>
             {" "}· Loan Factory, Inc. NMLS{" "}
             <a
@@ -124,13 +124,13 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
         <p className="font-['Outfit'] text-xs leading-relaxed" style={{ color: textColor }}>
           Tony Botchev (NMLS{" "}
           <a
-            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
+            href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
             target="_blank"
             rel="noopener noreferrer"
             className="underline"
             style={{ color: accentColor }}
           >
-            #114198
+            #320841
           </a>
           ) is a licensed Mortgage Loan Originator (MLO) sponsored by Loan Factory, Inc. Company NMLS{" "}
           <a
@@ -162,13 +162,13 @@ export default function NMLSDisclosure({ variant = "inline", dark = false }: NML
     <p className="font-['Outfit'] text-xs" style={{ color: textColor }}>
       Tony Botchev · NMLS{" "}
       <a
-        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/INDIVIDUAL/114198"
+        href="https://www.nmlsconsumeraccess.org/EntityDetails.aspx/COMPANY/320841"
         target="_blank"
         rel="noopener noreferrer"
         className="underline"
         style={{ color: accentColor }}
       >
-        #114198
+        #320841
       </a>
       {" "}· Loan Factory, Inc. NMLS{" "}
       <a

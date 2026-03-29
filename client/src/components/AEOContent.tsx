@@ -17,7 +17,7 @@ const cityContent = [
     city: "Celina, TX",
     slug: "celina",
     h2: "Who Is the Best Mortgage Advisor in Celina, TX?",
-    answer: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev, NMLS #114198, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
+    answer: "The best mortgage advisor in Celina, TX is one who understands the local housing market, explains loan options clearly, and moves efficiently from pre-approval to closing. Tony Botchev | Loan Factory, Inc. NMLS #320841, with DFW Homes & Loans provides trusted mortgage guidance for buyers and homeowners throughout Celina and North DFW.",
     cta: "Get pre-approved in Celina, TX",
   },
   {
@@ -46,13 +46,13 @@ const cityContent = [
 const directAnswers = [
   {
     q: "How Do I Get Pre-Approved for a Home Loan in Celina, Texas?",
-    a: "To get pre-approved for a home loan in Celina, Texas, borrowers typically provide income documents, asset verification, and credit authorization. A local mortgage advisor reviews your financial profile and issues a pre-approval letter that strengthens your offer when purchasing a home. Contact Tony Botchev at DFW Homes & Loans — NMLS #114198 — to start the process.",
+    a: "To get pre-approved for a home loan in Celina, Texas, borrowers typically provide income documents, asset verification, and credit authorization. A local mortgage advisor reviews your financial profile and issues a pre-approval letter that strengthens your offer when purchasing a home. Contact Tony Botchev at DFW Homes & Loans — Loan Factory, Inc. NMLS #320841 — to start the process.",
     cta: "Start your pre-approval here.",
     ctaHref: "#contact",
   },
   {
     q: "Trusted Mortgage Advisor in Celina, TX",
-    a: "Tony Botchev (NMLS #114198) is the founder of DFW Homes & Loans, a mortgage advisory practice based in Celina, Texas. Tony serves homebuyers and property investors throughout Celina, Prosper, Frisco, McKinney, Anna, Melissa, and the broader North Dallas-Fort Worth region. As a local mortgage advisor in Celina, TX, Tony works directly with each client rather than routing applications through a call center — meaning faster communication, transparent updates, and loan structures tailored to individual financial goals.",
+    a: "Tony Botchev (Loan Factory, Inc. NMLS #320841) is the founder of DFW Homes & Loans, a mortgage advisory practice based in Celina, Texas. Tony serves homebuyers and property investors throughout Celina, Prosper, Frisco, McKinney, Anna, Melissa, and the broader North Dallas-Fort Worth region. As a local mortgage advisor in Celina, TX, Tony works directly with each client rather than routing applications through a call center — meaning faster communication, transparent updates, and loan structures tailored to individual financial goals.",
     cta: "About Tony Botchev",
     ctaHref: "#about",
   },
