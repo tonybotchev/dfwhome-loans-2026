@@ -3,6 +3,7 @@
 */
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import { Link } from "wouter";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
 
 export default function Navbar() {
@@ -16,10 +17,11 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: "Loan Options", href: "#loans" },
-    { label: "Process", href: "#process" },
-    { label: "About Tony", href: "#about" },
-    { label: "Calculator", href: "#calculator" },
+    { label: "Loan Options", href: "#loans", type: "scroll" },
+    { label: "Process", href: "#process", type: "scroll" },
+    { label: "About Tony", href: "#about", type: "scroll" },
+    { label: "Calculator", href: "#calculator", type: "scroll" },
+    { label: "Blog", href: "/blog", type: "link" },
   ];
 
   const scrollTo = (href: string) => {
@@ -65,14 +67,25 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <button
-                key={link.href}
-                onClick={() => scrollTo(link.href)}
-                className="font-['Outfit'] font-500 text-sm uppercase tracking-widest transition-colors hover:text-[oklch(0.62_0.16_42)]"
-                style={{ color: "oklch(0.975 0.008 85)" }}
-              >
-                {link.label}
-              </button>
+              link.type === "link" ? (
+                <Link key={link.href} href={link.href}>
+                  <span
+                    className="font-['Outfit'] font-500 text-sm uppercase tracking-widest transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer"
+                    style={{ color: "oklch(0.975 0.008 85)" }}
+                  >
+                    {link.label}
+                  </span>
+                </Link>
+              ) : (
+                <button
+                  key={link.href}
+                  onClick={() => scrollTo(link.href)}
+                  className="font-['Outfit'] font-500 text-sm uppercase tracking-widest transition-colors hover:text-[oklch(0.62_0.16_42)]"
+                  style={{ color: "oklch(0.975 0.008 85)" }}
+                >
+                  {link.label}
+                </button>
+              )
             ))}
           </div>
 
@@ -115,17 +128,29 @@ export default function Navbar() {
       >
         <div className="flex flex-col items-center justify-center h-full gap-8">
           {navLinks.map((link, i) => (
-            <button
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className="font-display text-5xl tracking-wider transition-colors hover:text-[oklch(0.62_0.16_42)]"
-              style={{
-                color: "oklch(0.975 0.008 85)",
-                animationDelay: `${i * 0.07}s`,
-              }}
-            >
-              {link.label}
-            </button>
+            link.type === "link" ? (
+              <Link key={link.href} href={link.href}>
+                <span
+                  className="font-display text-5xl tracking-wider transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer"
+                  style={{ color: "oklch(0.975 0.008 85)", animationDelay: `${i * 0.07}s` }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </span>
+              </Link>
+            ) : (
+              <button
+                key={link.href}
+                onClick={() => scrollTo(link.href)}
+                className="font-display text-5xl tracking-wider transition-colors hover:text-[oklch(0.62_0.16_42)]"
+                style={{
+                  color: "oklch(0.975 0.008 85)",
+                  animationDelay: `${i * 0.07}s`,
+                }}
+              >
+                {link.label}
+              </button>
+            )
           ))}
           <div className="flex flex-col items-center gap-4 mt-4">
             <a
