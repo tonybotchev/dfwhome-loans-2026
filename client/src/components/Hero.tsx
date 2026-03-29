@@ -136,7 +136,7 @@ export default function Hero() {
               transition: "opacity 0.6s ease 0.7s, transform 0.6s ease 0.7s",
             }}
           >
-            Tony Botchev (Loan Factory, Inc. NMLS #320841) has helped North DFW families navigate mortgages since 2006. Conventional, FHA, VA, Jumbo, and DSCR — personalized for your goals.
+            Tony Botchev has helped North DFW families navigate mortgages since 2006. Conventional, FHA, VA, Jumbo, and DSCR — personalized for your goals.
           </p>
 
           {/* CTAs */}
@@ -170,7 +170,7 @@ export default function Hero() {
             }}
           >
             {[
-              { icon: <Shield size={14} />, text: "NMLS #114198 | Loan Factory #320841" },
+              { icon: <Shield size={14} />, text: "Licensed in Texas" },
               { icon: <Zap size={14} />, text: "Under 1hr Response" },
               { icon: <Clock size={14} />, text: "24h Pre-Approval" },
             ].map((badge) => (

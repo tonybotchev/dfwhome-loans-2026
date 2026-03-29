@@ -40,7 +40,7 @@ export default function Footer() {
               <div className="font-display text-2xl" style={{ color: "oklch(0.62 0.16 42)" }}>& LOANS</div>
             </div>
             <p className="font-['Outfit'] text-sm leading-relaxed mb-6" style={{ color: "oklch(0.65 0.02 85)" }}>
-              Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841. Your trusted mortgage advisor for North DFW families since 2006.
+              Your trusted mortgage advisor for North DFW families since 2006. Serving Celina, Prosper, Frisco, McKinney, and all of North DFW.
             </p>
             {/* Social */}
             <div className="flex gap-3">

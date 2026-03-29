@@ -9,12 +9,12 @@ import { ArrowRight } from "lucide-react";
 const TONY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663335597871/XWnvoWuu2r8GZzWNujZ6D6/tony-botchev_1acd5f43.jpg";
 
 const credentials = [
-  "NMLS #114198",
-  "Loan Factory, Inc. NMLS #320841",
   "Texas Licensed MLO",
   "Equal Housing Lender",
   "18+ Years Experience",
   "500+ Families Helped",
+  "Celina & North DFW",
+  "Loan Factory Sponsored",
 ];
 
 const areas = ["Celina", "Prosper", "Frisco", "McKinney", "Anna", "Melissa", "Aubrey"];
@@ -65,7 +65,7 @@ export default function AboutTony() {
             <div className="relative overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <img
                 src={TONY_PHOTO}
-                alt="Tony Botchev — Mortgage Advisor in Celina TX, Loan Factory, Inc. NMLS #320841"
+                alt="Tony Botchev — Mortgage Advisor in Celina TX, sponsored by Loan Factory, Inc."
                 className="w-full h-full object-cover object-top"
               />
               {/* Bottom gradient */}
@@ -89,7 +89,7 @@ export default function AboutTony() {
                   style={{ fontSize: "9px", fill: "oklch(0.975 0.008 85)", fontWeight: 700, letterSpacing: "2px" }}
                 >
                   <textPath href="#circle">
-                    Loan Factory, Inc. NMLS #320841 · TEXAS LICENSED · EQUAL HOUSING ·
+                    TEXAS LICENSED · EQUAL HOUSING LENDER · LOAN FACTORY ·
                   </textPath>
                 </text>
                 <circle cx="60" cy="60" r="8" fill="oklch(0.975 0.008 85)" />

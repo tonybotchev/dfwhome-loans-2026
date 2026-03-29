@@ -4,7 +4,6 @@
 */
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
-import NMLSDisclosure from "@/components/NMLSDisclosure";
 
 const loans = [
   {
@@ -291,9 +290,6 @@ export default function LoanPrograms() {
               Start My Pre-Approval <ArrowRight size={16} />
             </span>
           </button>
-          <div className="mt-6 max-w-2xl mx-auto">
-            <NMLSDisclosure variant="section" />
-          </div>
         </div>
       </div>
     </section>
