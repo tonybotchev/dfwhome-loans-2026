@@ -8,6 +8,7 @@ import AboutTony from "@/components/AboutTony";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import PreApproval from "@/components/PreApproval";
+import PreQualForm from "@/components/PreQualForm";
 import Calculator from "@/components/Calculator";
 import ContactForm from "@/components/ContactForm";
 import FAQ from "@/components/FAQ";
@@ -26,6 +27,7 @@ export default function Home() {
       <Process />
       <Testimonials />
       <PreApproval />
+      <PreQualForm />
       <Calculator />
       <ContactForm />
       <FAQ />
