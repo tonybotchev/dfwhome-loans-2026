@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 const TONY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663335597871/XWnvoWuu2r8GZzWNujZ6D6/tony-botchev_1acd5f43.jpg";
 
 const credentials = [
-  "Loan Factory, Inc. NMLS #320841",
+  "NMLS #114198",
   "Loan Factory, Inc. NMLS #320841",
   "Texas Licensed MLO",
   "Equal Housing Lender",

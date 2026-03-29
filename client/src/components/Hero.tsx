@@ -170,7 +170,7 @@ export default function Hero() {
             }}
           >
             {[
-              { icon: <Shield size={14} />, text: "Loan Factory, Inc. NMLS #320841" },
+              { icon: <Shield size={14} />, text: "NMLS #114198 | Loan Factory #320841" },
               { icon: <Zap size={14} />, text: "Under 1hr Response" },
               { icon: <Clock size={14} />, text: "24h Pre-Approval" },
             ].map((badge) => (
