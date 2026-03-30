@@ -2,5 +2,8 @@
   "buildCommand": "pnpm run build:client",
   "outputDirectory": "dist/public",
   "installCommand": "pnpm install --shamefully-hoist",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
