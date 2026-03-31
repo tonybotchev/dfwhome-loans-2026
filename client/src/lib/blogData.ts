@@ -371,6 +371,105 @@ export const blogPosts: BlogPost[] = [
       image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=80",
     },
   },
+  {
+    id: "va-loan-myths-texas",
+    slug: "va-loan-myths-texas",
+    title: "5 VA Loan Myths That Are Costing Texas Veterans Money in 2026",
+    excerpt:
+      "Think VA loans are too slow or sellers won't accept them? These myths are costing North DFW veterans thousands. Here's the truth about your zero-down, no-PMI benefit.",
+    category: "Loan Education",
+    date: "April 3, 2026",
+    dateISO: "2026-04-03",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1580130775562-0ef92da028de?w=1200&q=80",
+    featured: false,
+    seoTitle: "5 VA Loan Myths Costing Texas Veterans Money in 2026 | Tony Botchev",
+    seoDescription:
+      "Think VA loans are too slow or sellers won't accept them? Tony Botchev debunks the top 5 VA loan myths for veterans buying in North DFW in 2026.",
+    faq: [
+      {
+        q: "What credit score is required for a VA loan in Texas?",
+        a: "The VA does not set a minimum credit score, but most lenders require a score of 580 to 620. Higher scores generally unlock better interest rates.",
+      },
+      {
+        q: "Can I buy an investment property with a VA loan?",
+        a: "No, VA loans are strictly for primary residences. However, you can buy a multi-unit property (up to 4 units) provided you live in one of the units.",
+      },
+      {
+        q: "Does a VA loan require a down payment if the home price exceeds the county limit?",
+        a: "As of 2020, there are no longer maximum loan limits for veterans with full entitlement. You can buy a high-value home with zero down, provided you qualify for the monthly payment based on your income and credit.",
+      },
+      {
+        q: "How do I get my Certificate of Eligibility (COE)?",
+        a: "You can obtain your COE through the VA's eBenefits portal, or an experienced VA lender can pull it for you directly through the VA's automated system in minutes.",
+      },
+      {
+        q: "Are surviving spouses eligible for VA loans?",
+        a: "Yes, unremarried surviving spouses of veterans who died in service or from a service-connected disability may be eligible for the VA loan benefit, including the funding fee exemption.",
+      },
+    ],
+    content: `
+<p>If you served in the military and you are looking to buy a home in North DFW in 2026, your <a href="/loans/va">VA loan benefit</a> is the most powerful financing tool available. Yet, year after year, qualified veterans in Celina, Prosper, and Frisco choose conventional or FHA loans because of outdated myths about the VA loan process.</p>
+
+<p>These misconceptions aren't just frustrating — they are expensive. Bypassing a VA loan can mean paying thousands of dollars in unnecessary down payments and mortgage insurance. Let's break down the five most common VA loan myths and look at the reality of using your benefit in today's North Texas housing market.</p>
+
+<h2>Myth 1: "Sellers Won't Accept VA Offers"</h2>
+
+<p>This is perhaps the most damaging myth in real estate. It stems from a time when VA appraisals were notoriously slow and the VA required sellers to pay for certain repairs. In 2026, this is no longer the reality.</p>
+
+<p>While it is true that in the hyper-competitive market of 2021, some sellers preferred cash or conventional offers with waived contingencies, the market has shifted. With inventory rising in North DFW, sellers are looking for qualified buyers who can close on time. A pre-approved VA buyer working with a local lender is a strong, reliable buyer. The key is having a lender who proactively communicates with the listing agent to assure them that the VA appraisal process will be smooth and efficient.</p>
+
+<h2>Myth 2: "VA Appraisals Take Too Long and Are Too Strict"</h2>
+
+<p>The fear of the Tidewater Initiative — when an appraiser notifies the lender that the property might not appraise for the purchase price — scares many buyers and agents. However, VA appraisals in North DFW typically take the same amount of time as conventional appraisals, usually 7 to 10 days.</p>
+
+<p>As for strictness, the VA's Minimum Property Requirements (MPRs) are designed to ensure the home is safe, structurally sound, and sanitary. They are not looking for cosmetic flaws. If you are <a href="/cities/celina">buying a new build in Celina</a> or purchasing a <a href="/cities/mckinney">well-maintained resale home in McKinney</a>, the VA appraisal is rarely a hurdle. It protects you, the veteran, from buying a money pit.</p>
+
+<h2>Myth 3: "You Can Only Use a VA Loan Once"</h2>
+
+<p>Your VA loan benefit is not a one-time deal. You can use it multiple times throughout your life. In fact, it is possible to have more than one active VA loan at the same time, provided you have enough remaining entitlement.</p>
+
+<p>If you bought a home in San Antonio with a VA loan, received orders to relocate, and are now moving to Frisco, you can potentially keep your first home as a rental and use your remaining entitlement to buy your new primary residence with zero down. The calculation for remaining entitlement can be complex, which is why it is crucial to work with a loan officer who understands the intricacies of VA financing.</p>
+
+<h2>Myth 4: "VA Loans Are Only for First-Time Buyers"</h2>
+
+<p>Because VA loans offer zero-down financing, many people assume they are only for first-time homebuyers who haven't saved for a down payment. This is entirely false.</p>
+
+<p>Whether you are buying your first home or your fifth, the VA loan often provides the best terms. Even if you have the cash for a 20% down payment, using a VA loan with zero down allows you to keep your capital liquid for investments, home improvements, or emergency reserves, while still securing a highly competitive interest rate without private mortgage insurance (PMI).</p>
+
+<h2>Myth 5: "The VA Funding Fee Makes It Too Expensive"</h2>
+
+<p>Unlike conventional loans that require PMI if you put down less than 20%, VA loans require a one-time VA Funding Fee. For first-time use with zero down, the fee is typically 2.15% of the loan amount.</p>
+
+<p>However, there are two critical points to remember. First, the funding fee can be rolled into the loan amount, meaning you don't have to pay it out of pocket at closing. Second, and most importantly, veterans receiving VA compensation for a service-connected disability are entirely exempt from the funding fee. If you have a disability rating of 10% or higher, the funding fee is waived, making the VA loan an unbeatable financial product.</p>
+
+<h2>The Bottom Line for North DFW Veterans</h2>
+
+<p>The VA loan is an earned benefit that offers zero down payment, no PMI, and competitive interest rates. If you are a veteran planning to buy in North DFW, do not let myths dictate your financial strategy.</p>
+
+<p>The most important step you can take is to get pre-approved with a lender who knows how to structure and close VA loans efficiently. We can review your Certificate of Eligibility (COE), calculate your entitlement, and show you exactly what your purchasing power looks like in today's market. <a href="/">Get pre-qualified today</a> and take the first step toward using the benefit you earned.</p>
+
+<p><strong>Tony Botchev, NMLS #114198</strong> | Sponsored by Loan Factory, Inc. NMLS #320841 | Equal Housing Lender</p>
+    `,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: "5 VA Loan Myths That Are Costing Texas Veterans Money in 2026",
+      datePublished: "2026-04-03",
+      dateModified: "2026-04-03",
+      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
+      publisher: {
+        "@type": "Organization",
+        name: "DFW Homes & Loans",
+        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
+      },
+      description:
+        "Think VA loans are too slow or sellers won't accept them? Tony Botchev debunks the top 5 VA loan myths for veterans buying in North DFW in 2026.",
+      url: "https://www.dfwhome.loans/blog/va-loan-myths-texas",
+      mainEntityOfPage: "https://www.dfwhome.loans/blog/va-loan-myths-texas",
+      image: "https://images.unsplash.com/photo-1580130775562-0ef92da028de?w=1200&q=80",
+    },
+  },
 ];
 
 export const categoryColors: Record<string, string> = {
