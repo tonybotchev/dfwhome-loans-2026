@@ -23,6 +23,105 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "va-loan-myths-dfw-2026",
+    slug: "va-loan-myths-dfw-2026",
+    title: "5 VA Loan Myths That Are Costing North DFW Veterans Money in 2026",
+    excerpt:
+      "Don't let outdated myths keep you from using your earned VA loan benefit. Tony Botchev breaks down the 5 most common VA loan misconceptions costing North DFW veterans money in 2026.",
+    category: "Loan Education",
+    date: "April 1, 2026",
+    dateISO: "2026-04-01",
+    readTime: "6 min read",
+    image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80",
+    featured: false,
+    seoTitle: "5 VA Loan Myths Costing DFW Veterans Money in 2026 | Tony Botchev",
+    seoDescription:
+      "Don't let these 5 common VA loan myths keep you from buying a home in North DFW. Tony Botchev breaks down the truth about VA financing in 2026.",
+    faq: [
+      {
+        q: "Can I buy a new construction home in Celina with a VA loan?",
+        a: "Yes! Most major builders in Celina and throughout North DFW accept VA financing. It's a great way to get into a brand-new home with zero down payment.",
+      },
+      {
+        q: "Do I have to pay the VA funding fee out of pocket?",
+        a: "No, the VA funding fee can be financed into your total loan amount, so you don't need to bring that cash to the closing table.",
+      },
+      {
+        q: "Are surviving spouses eligible for a VA loan?",
+        a: "In many cases, yes. Unremarried surviving spouses of veterans who died in service or from a service-connected disability may be eligible for the VA loan benefit.",
+      },
+      {
+        q: "How long does it take to close a VA loan in Texas?",
+        a: "A VA loan can typically close in 30 days or less, similar to a conventional loan, especially when working with an experienced local lender who understands the process.",
+      },
+      {
+        q: "Can I use a VA loan to buy an investment property?",
+        a: "VA loans are strictly for primary residences. However, you can buy a multi-unit property (up to 4 units) with a VA loan, provided you live in one of the units as your primary residence.",
+      },
+    ],
+    content: `
+<p>If you have served in the military and are looking to <a href="/cities/celina">buy a home in Celina</a> or anywhere in North DFW, you have access to one of the most powerful mortgage products available: the <a href="/loans/va">VA loan</a>. However, despite its incredible benefits, many veterans in Celina, Prosper, and Frisco hesitate to use their VA entitlement due to widespread misinformation.</p>
+
+<p>Let's break down the five most common VA loan myths that are keeping qualified veterans on the sidelines in 2026, and look at the facts you need to make an informed decision.</p>
+
+<h2>Myth 1: "Sellers Won't Accept a VA Loan Offer"</h2>
+
+<p>This is perhaps the most damaging myth in the current market. The belief is that VA loans are too difficult to close, require excessive repairs, or take too long, making sellers prefer conventional or cash offers.</p>
+
+<p><strong>The Fact:</strong> In a competitive market, a well-structured VA offer from a pre-approved buyer working with a local lender is highly competitive. The VA appraisal process has been streamlined, and the Minimum Property Requirements (MPRs) are primarily focused on safety, soundness, and sanitation — things any buyer should want in a home. What sellers and listing agents care about most is the certainty of closing. A solid pre-approval from a local expert like Tony Botchev at DFW Homes &amp; Loans carries significant weight because local lenders close on time.</p>
+
+<h2>Myth 2: "I Can Only Use My VA Loan Benefit Once"</h2>
+
+<p>Many veterans believe that the VA loan is a one-time benefit, leading them to "save" it for their forever home.</p>
+
+<p><strong>The Fact:</strong> Your VA loan entitlement is a lifetime benefit. You can use it multiple times. In fact, it is possible to have more than one active VA loan at the same time, provided you have enough remaining entitlement. If you buy a home in <a href="/cities/mckinney">McKinney</a> using a VA loan, live in it for a few years, and then decide to move to a larger home in Celina, you can often use your VA benefit again to purchase the new primary residence.</p>
+
+<h2>Myth 3: "VA Loans Are Only for First-Time Homebuyers"</h2>
+
+<p>Because the VA loan offers a zero-down payment option, it is often mistakenly categorized as a first-time buyer program.</p>
+
+<p><strong>The Fact:</strong> There is no requirement that you must be a first-time homebuyer to use a VA loan. Whether you are buying your first home, your third home, or downsizing for retirement, your VA benefit is available to you as long as the property will be your primary residence.</p>
+
+<h2>Myth 4: "The VA Funding Fee Makes the Loan Too Expensive"</h2>
+
+<p>The VA funding fee is a one-time fee paid to the Department of Veterans Affairs to help keep the program running. Some buyers worry this fee negates the benefits of the loan.</p>
+
+<p><strong>The Fact:</strong> While the funding fee is a real cost, it can be rolled into the loan amount, meaning you don't have to pay it out of pocket at closing. More importantly, the VA loan does not require Private Mortgage Insurance (PMI), even with zero down. Over the life of the loan, the savings from not paying monthly PMI typically far outweigh the cost of the upfront funding fee. Additionally, veterans receiving VA compensation for a service-connected disability are exempt from the funding fee entirely.</p>
+
+<h2>Myth 5: "I Need Perfect Credit to Qualify"</h2>
+
+<p>Some veterans assume that because the VA loan offers such great terms — zero down, no PMI — the credit requirements must be exceptionally strict.</p>
+
+<p><strong>The Fact:</strong> The VA itself does not set a minimum credit score requirement. While individual lenders do have their own minimums (often around 580 to 620), these are generally much more forgiving than conventional loan requirements. The VA loan program is designed to help veterans achieve homeownership, and the underwriting guidelines reflect that mission.</p>
+
+<h2>The Bottom Line for DFW Veterans</h2>
+
+<p>The VA loan is an earned benefit that offers unparalleled advantages: zero down payment, no monthly mortgage insurance, and competitive interest rates. If you are a veteran looking to buy in North DFW, don't let myths dictate your financial future.</p>
+
+<p>The best way to understand your true purchasing power is to <a href="/">get pre-qualified today</a>. A free pre-approval consultation will give you real numbers based on your specific situation, allowing you to make a confident decision.</p>
+
+<p><strong>Tony Botchev, NMLS #114198</strong> | Sponsored by Loan Factory, Inc. NMLS #320841 | Equal Housing Lender</p>
+    `,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: "5 VA Loan Myths That Are Costing North DFW Veterans Money in 2026",
+      datePublished: "2026-04-01",
+      dateModified: "2026-04-01",
+      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
+      publisher: {
+        "@type": "Organization",
+        name: "DFW Homes & Loans",
+        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
+      },
+      description:
+        "Don't let these 5 common VA loan myths keep you from buying a home in North DFW. Tony Botchev breaks down the truth about VA financing in 2026.",
+      url: "https://www.dfwhome.loans/blog/va-loan-myths-dfw-2026",
+      mainEntityOfPage: "https://www.dfwhome.loans/blog/va-loan-myths-dfw-2026",
+      image: "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=1200&q=80",
+    },
+  },
+  {
     id: "spring-2026-dfw-housing-market",
     slug: "spring-2026-dfw-housing-market",
     title: "Spring 2026 DFW Housing Market: What North Texas Buyers Need to Know",
