@@ -1,14 +1,17 @@
 /* Kinetic Texas — Navbar
    Sticky with blur backdrop, forest green on scroll, orange CTA
+   FIX: Logo navigates to /, scroll links use /#section when not on homepage
 */
 import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [location] = useLocation();
+  const isHomepage = location === "/";
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -24,10 +27,26 @@ export default function Navbar() {
     { label: "Blog", href: "/blog", type: "link" },
   ];
 
-  const scrollTo = (href: string) => {
+  const handleNavClick = (href: string) => {
     setMenuOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
+    if (isHomepage) {
+      // On homepage: smooth scroll to section
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // On any other page: navigate to homepage + section hash
+      window.location.href = "/" + href;
+    }
+  };
+
+  const handleGetPreQualified = () => {
+    setMenuOpen(false);
+    if (isHomepage) {
+      const el = document.querySelector("#contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#contact";
+    }
   };
 
   return (
@@ -44,15 +63,11 @@ export default function Navbar() {
         }`}
       >
         <div className="container flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <a
-            href="#"
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            className="flex flex-col leading-none group"
-          >
+          {/* Logo — always navigates to homepage */}
+          <Link href="/" className="flex flex-col leading-none group">
             <span
               className="font-display text-2xl md:text-3xl tracking-wider transition-colors"
-              style={{ color: scrolled ? "oklch(0.975 0.008 85)" : "oklch(0.975 0.008 85)" }}
+              style={{ color: "oklch(0.975 0.008 85)" }}
             >
               DFW HOMES
             </span>
@@ -62,7 +77,7 @@ export default function Navbar() {
             >
               & LOANS
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
@@ -79,7 +94,7 @@ export default function Navbar() {
               ) : (
                 <button
                   key={link.href}
-                  onClick={() => scrollTo(link.href)}
+                  onClick={() => handleNavClick(link.href)}
                   className="font-['Outfit'] font-500 text-sm uppercase tracking-widest transition-colors hover:text-[oklch(0.62_0.16_42)]"
                   style={{ color: "oklch(0.975 0.008 85)" }}
                 >
@@ -100,7 +115,7 @@ export default function Navbar() {
               (945) 370-8656
             </a>
             <button
-              onClick={() => scrollTo("#contact")}
+              onClick={handleGetPreQualified}
               className="btn-primary-kt text-sm px-5 py-2.5"
             >
               <span>Get Pre-Qualified</span>
@@ -141,7 +156,7 @@ export default function Navbar() {
             ) : (
               <button
                 key={link.href}
-                onClick={() => scrollTo(link.href)}
+                onClick={() => handleNavClick(link.href)}
                 className="font-display text-5xl tracking-wider transition-colors hover:text-[oklch(0.62_0.16_42)]"
                 style={{
                   color: "oklch(0.975 0.008 85)",
@@ -162,7 +177,7 @@ export default function Navbar() {
               (945) 370-8656
             </a>
             <button
-              onClick={() => scrollTo("#contact")}
+              onClick={handleGetPreQualified}
               className="btn-primary-kt text-base px-8 py-3 mt-2"
             >
               <span>Get Pre-Qualified Free</span>
