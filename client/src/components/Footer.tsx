@@ -2,32 +2,39 @@
    Forest green, SEO links, compliance text
 */
 import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Link } from "wouter";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
 
 const loanLinks = [
-  { label: "Conventional Loans", href: "#loans" },
-  { label: "FHA Loans", href: "#loans" },
-  { label: "VA Loans", href: "#loans" },
-  { label: "Jumbo Loans", href: "#loans" },
-  { label: "DSCR Investor", href: "#loans" },
-  { label: "Refinance", href: "#loans" },
+  { label: "Conventional Loans", href: "/loans/conventional" },
+  { label: "FHA Loans", href: "/loans/fha" },
+  { label: "VA Loans", href: "/loans/va" },
+  { label: "Jumbo Loans", href: "/loans/jumbo" },
+  { label: "USDA Loans", href: "/loans/usda" },
+  { label: "DSCR Investor", href: "/loans/dscr" },
+  { label: "First-Time Buyer", href: "/loans/first-time-buyer" },
+  { label: "Refinance", href: "/loans/refinance" },
 ];
 
 const areaLinks = [
-  { label: "Celina, TX", href: "#contact" },
-  { label: "Prosper, TX", href: "#contact" },
-  { label: "Frisco, TX", href: "#contact" },
-  { label: "McKinney, TX", href: "#contact" },
-  { label: "Anna, TX", href: "#contact" },
-  { label: "Melissa, TX", href: "#contact" },
+  { label: "Celina, TX", href: "/cities/celina" },
+  { label: "Prosper, TX", href: "/cities/prosper" },
+  { label: "Frisco, TX", href: "/cities/frisco" },
+  { label: "McKinney, TX", href: "/cities/mckinney" },
+  { label: "Plano, TX", href: "/cities/plano" },
+  { label: "Allen, TX", href: "/cities/allen" },
+  { label: "Anna, TX", href: "/cities/anna" },
+  { label: "Melissa, TX", href: "/cities/melissa" },
+  { label: "Aubrey, TX", href: "/cities/aubrey" },
+  { label: "Gunter, TX", href: "/cities/gunter" },
+  { label: "Little Elm, TX", href: "/cities/little-elm" },
+  { label: "Wylie, TX", href: "/cities/wylie" },
+  { label: "Lewisville, TX", href: "/cities/lewisville" },
+  { label: "The Colony, TX", href: "/cities/the-colony" },
+  { label: "Denton, TX", href: "/cities/denton" },
 ];
 
 export default function Footer() {
-  const scrollTo = (href: string) => {
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <footer style={{ background: "oklch(0.18 0.055 155)" }}>
       {/* Main footer */}
@@ -40,7 +47,7 @@ export default function Footer() {
               <div className="font-display text-2xl" style={{ color: "oklch(0.62 0.16 42)" }}>& LOANS</div>
             </div>
             <p className="font-['Outfit'] text-sm leading-relaxed mb-6" style={{ color: "oklch(0.65 0.02 85)" }}>
-              Your trusted mortgage advisor for North DFW families since 2006. Serving Celina, Prosper, Frisco, McKinney, and all of North DFW.
+              Your trusted mortgage advisor for North DFW families since 2006. Serving Celina, Prosper, Frisco, McKinney, Plano, Allen, and all of North Texas.
             </p>
             {/* Social */}
             <div className="flex gap-3">
@@ -83,13 +90,14 @@ export default function Footer() {
             <ul className="space-y-3">
               {loanLinks.map((l) => (
                 <li key={l.label}>
-                  <button
-                    onClick={() => scrollTo(l.href)}
-                    className="font-['Outfit'] text-sm transition-colors hover:text-[oklch(0.62_0.16_42)]"
-                    style={{ color: "oklch(0.65 0.02 85)" }}
-                  >
-                    {l.label}
-                  </button>
+                  <Link href={l.href}>
+                    <span
+                      className="font-['Outfit'] text-sm transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer"
+                      style={{ color: "oklch(0.65 0.02 85)" }}
+                    >
+                      {l.label}
+                    </span>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -100,18 +108,29 @@ export default function Footer() {
             <h4 className="font-['Outfit'] font-700 text-xs uppercase tracking-widest mb-5" style={{ color: "oklch(0.62 0.16 42)" }}>
               Areas Served
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {areaLinks.map((l) => (
                 <li key={l.label}>
-                  <button
-                    onClick={() => scrollTo(l.href)}
-                    className="font-['Outfit'] text-sm transition-colors hover:text-[oklch(0.62_0.16_42)]"
-                    style={{ color: "oklch(0.65 0.02 85)" }}
-                  >
-                    {l.label}
-                  </button>
+                  <Link href={l.href}>
+                    <span
+                      className="font-['Outfit'] text-sm transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer"
+                      style={{ color: "oklch(0.65 0.02 85)" }}
+                    >
+                      {l.label}
+                    </span>
+                  </Link>
                 </li>
               ))}
+              <li className="pt-1">
+                <Link href="/cities">
+                  <span
+                    className="font-['Outfit'] text-xs uppercase tracking-widest transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer"
+                    style={{ color: "oklch(0.62 0.16 42)" }}
+                  >
+                    View All Cities →
+                  </span>
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -142,12 +161,11 @@ export default function Footer() {
             </div>
 
             <div className="mt-6">
-              <button
-                onClick={() => scrollTo("#contact")}
-                className="btn-primary-kt text-xs px-5 py-2.5 w-full"
-              >
-                <span>Get Pre-Qualified Free →</span>
-              </button>
+              <Link href="/#contact">
+                <span className="btn-primary-kt text-xs px-5 py-2.5 w-full inline-block text-center cursor-pointer">
+                  Get Pre-Qualified Free →
+                </span>
+              </Link>
             </div>
           </div>
         </div>
@@ -168,12 +186,16 @@ export default function Footer() {
             © {new Date().getFullYear()} DFW Homes & Loans · Tony Botchev, NMLS #114198 | Sponsored by Loan Factory, Inc. NMLS #320841 · Texas DSML Licensed · Equal Housing Lender · All loans subject to credit approval.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.5 0.02 85)" }}>
-              Privacy Policy
-            </a>
-            <a href="#" className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.5 0.02 85)" }}>
-              Terms of Service
-            </a>
+            <Link href="/privacy">
+              <span className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors cursor-pointer" style={{ color: "oklch(0.5 0.02 85)" }}>
+                Privacy Policy
+              </span>
+            </Link>
+            <Link href="/terms">
+              <span className="font-['Outfit'] text-xs hover:text-[oklch(0.62_0.16_42)] transition-colors cursor-pointer" style={{ color: "oklch(0.5 0.02 85)" }}>
+                Terms of Service
+              </span>
+            </Link>
             <a
               href="https://www.nmlsconsumeraccess.org"
               target="_blank"

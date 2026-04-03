@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 
 // Core pages
 import Home from "./pages/Home";
+import Cities from "./pages/Cities";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import About from "./pages/About";
@@ -21,6 +22,7 @@ import FirstTimeBuyer from "./pages/loans/FirstTimeBuyer";
 import Refinance from "./pages/loans/Refinance";
 import DSCR from "./pages/loans/DSCR";
 import Jumbo from "./pages/loans/Jumbo";
+import USDA from "./pages/loans/USDA";
 
 // City pages
 import Celina from "./pages/cities/Celina";
@@ -45,6 +47,7 @@ function Router() {
       {/* Core */}
       <Route path="/" component={Home} />
       <Route path="/about" component={About} />
+      <Route path="/cities" component={Cities} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/privacy" component={PrivacyPolicy} />
@@ -58,6 +61,7 @@ function Router() {
       <Route path="/loans/refinance" component={Refinance} />
       <Route path="/loans/dscr" component={DSCR} />
       <Route path="/loans/jumbo" component={Jumbo} />
+      <Route path="/loans/usda" component={USDA} />
 
       {/* City pages */}
       <Route path="/cities/celina" component={Celina} />

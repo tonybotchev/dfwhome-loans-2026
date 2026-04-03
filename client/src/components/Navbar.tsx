@@ -21,9 +21,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: "Loan Options", href: "#loans", type: "scroll" },
+    { label: "Cities", href: "/cities", type: "link" },
     { label: "Process", href: "#process", type: "scroll" },
     { label: "About Tony", href: "#about", type: "scroll" },
-    { label: "Calculator", href: "#calculator", type: "scroll" },
     { label: "Blog", href: "/blog", type: "link" },
   ];
 
