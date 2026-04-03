@@ -9,136 +9,12 @@ import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
-import { ArrowRight, Calendar, Clock, Tag } from "lucide-react";
-
-const blogPosts = [
-  {
-    id: "spring-2026-dfw-housing-market",
-    slug: "spring-2026-dfw-housing-market",
-    title: "Spring 2026 DFW Housing Market: What North Texas Buyers Need to Know",
-    excerpt:
-      "Inventory is rising in Celina, Prosper, and Frisco — but rates are still the wildcard. Here's what the data says and how to position yourself before summer competition heats up.",
-    category: "Market Update",
-    date: "March 28, 2026",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80",
-    featured: true,
-    schema: {
-      "@type": "BlogPosting",
-      headline: "Spring 2026 DFW Housing Market: What North Texas Buyers Need to Know",
-      datePublished: "2026-03-28",
-      dateModified: "2026-03-28",
-      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
-      publisher: {
-        "@type": "Organization",
-        name: "DFW Homes & Loans",
-        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
-      },
-      description:
-        "Inventory is rising in Celina, Prosper, and Frisco — but rates are still the wildcard. Here's what the data says and how to position yourself before summer competition heats up.",
-      url: "https://www.dfwhome.loans/blog/spring-2026-dfw-housing-market",
-      mainEntityOfPage: "https://www.dfwhome.loans/blog/spring-2026-dfw-housing-market",
-    },
-  },
-  {
-    id: "fha-vs-conventional-celina-tx",
-    slug: "fha-vs-conventional-celina-tx",
-    title: "FHA vs. Conventional Loans in Celina TX: Which Is Right for You in 2026?",
-    excerpt:
-      "With new build communities exploding in Celina and Prosper, first-time buyers are constantly asking: FHA or Conventional? The answer depends on 3 key numbers — here's how to figure it out.",
-    category: "Loan Education",
-    date: "March 21, 2026",
-    readTime: "6 min read",
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&q=80",
-    featured: false,
-    schema: {
-      "@type": "BlogPosting",
-      headline: "FHA vs. Conventional Loans in Celina TX: Which Is Right for You in 2026?",
-      datePublished: "2026-03-21",
-      dateModified: "2026-03-21",
-      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
-      publisher: {
-        "@type": "Organization",
-        name: "DFW Homes & Loans",
-        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
-      },
-      description:
-        "With new build communities exploding in Celina and Prosper, first-time buyers are constantly asking: FHA or Conventional? The answer depends on 3 key numbers.",
-      url: "https://www.dfwhome.loans/blog/fha-vs-conventional-celina-tx",
-      mainEntityOfPage: "https://www.dfwhome.loans/blog/fha-vs-conventional-celina-tx",
-    },
-  },
-  {
-    id: "down-payment-myths-north-dfw",
-    slug: "down-payment-myths-north-dfw",
-    title: "5 Down Payment Myths That Are Keeping North DFW Buyers on the Sidelines",
-    excerpt:
-      "\"I need 20% down\" is the most expensive myth in real estate. In 2026, qualified buyers in Frisco, McKinney, and Celina can get into a home with as little as 3% — sometimes less.",
-    category: "First-Time Buyers",
-    date: "March 14, 2026",
-    readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80",
-    featured: false,
-    schema: {
-      "@type": "BlogPosting",
-      headline: "5 Down Payment Myths That Are Keeping North DFW Buyers on the Sidelines",
-      datePublished: "2026-03-14",
-      dateModified: "2026-03-14",
-      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
-      publisher: {
-        "@type": "Organization",
-        name: "DFW Homes & Loans",
-        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
-      },
-      description:
-        "5 down payment myths that are keeping North DFW buyers on the sidelines. Qualified buyers can get into a home with as little as 3% down.",
-      url: "https://www.dfwhome.loans/blog/down-payment-myths-north-dfw",
-      mainEntityOfPage: "https://www.dfwhome.loans/blog/down-payment-myths-north-dfw",
-    },
-  },
-  {
-    id: "dscr-loans-dfw-investors",
-    slug: "dscr-loans-dfw-investors",
-    title: "DSCR Loans in DFW: The Investor's Secret Weapon for 2026",
-    excerpt:
-      "Debt Service Coverage Ratio loans let real estate investors qualify based on rental income — not personal income. If you're building a portfolio in North Texas, this is the loan you need to understand.",
-    category: "Investment",
-    date: "March 7, 2026",
-    readTime: "7 min read",
-    image: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
-    featured: false,
-    schema: {
-      "@type": "BlogPosting",
-      headline: "DSCR Loans in DFW: The Investor's Secret Weapon for 2026",
-      datePublished: "2026-03-07",
-      dateModified: "2026-03-07",
-      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
-      publisher: {
-        "@type": "Organization",
-        name: "DFW Homes & Loans",
-        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
-      },
-      description:
-        "DSCR loans let real estate investors qualify based on rental income — not personal income. If you're building a portfolio in North Texas, this is the loan you need.",
-      url: "https://www.dfwhome.loans/blog/dscr-loans-dfw-investors",
-      mainEntityOfPage: "https://www.dfwhome.loans/blog/dscr-loans-dfw-investors",
-    },
-  },
-];
-
-const categoryColors: Record<string, string> = {
-  "Market Update": "bg-orange-100 text-orange-800",
-  "Loan Education": "bg-green-100 text-green-800",
-  "First-Time Buyers": "bg-blue-100 text-blue-800",
-  Investment: "bg-purple-100 text-purple-800",
-};
+import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { blogPosts, categoryColors } from "@/lib/blogData";
 
 export default function Blog() {
   const featured = blogPosts[0];
   const rest = blogPosts.slice(1);
-
-  // Inject BlogPosting schemas
-  const schemasJson = JSON.stringify(blogPosts.map((p) => p.schema));
 
   return (
     <div className="min-h-screen" style={{ background: "oklch(0.975 0.008 85)" }}>
@@ -264,7 +140,7 @@ export default function Blog() {
                 </div>
                 <Link href={`/blog/${featured.slug}`}>
                   <button
-                    className="flex items-center gap-2 font-['Outfit'] text-sm font-semibold transition-all hover:gap-3"
+                    className="flex items-center gap-2 font-['Outfit'] text-sm font-semibold tracking-wide transition-all hover:gap-3"
                     style={{ color: "oklch(0.62 0.16 42)" }}
                   >
                     Read Article <ArrowRight size={14} />
