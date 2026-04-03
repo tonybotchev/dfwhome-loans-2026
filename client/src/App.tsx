@@ -32,6 +32,12 @@ import Melissa from "./pages/cities/Melissa";
 import Aubrey from "./pages/cities/Aubrey";
 import Gunter from "./pages/cities/Gunter";
 import LittleElm from "./pages/cities/LittleElm";
+import Plano from "./pages/cities/Plano";
+import Allen from "./pages/cities/Allen";
+import Denton from "./pages/cities/Denton";
+import Wylie from "./pages/cities/Wylie";
+import Lewisville from "./pages/cities/Lewisville";
+import TheColony from "./pages/cities/TheColony";
 
 function Router() {
   return (
@@ -63,6 +69,12 @@ function Router() {
       <Route path="/cities/aubrey" component={Aubrey} />
       <Route path="/cities/gunter" component={Gunter} />
       <Route path="/cities/little-elm" component={LittleElm} />
+      <Route path="/cities/plano" component={Plano} />
+      <Route path="/cities/allen" component={Allen} />
+      <Route path="/cities/denton" component={Denton} />
+      <Route path="/cities/wylie" component={Wylie} />
+      <Route path="/cities/lewisville" component={Lewisville} />
+      <Route path="/cities/the-colony" component={TheColony} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
