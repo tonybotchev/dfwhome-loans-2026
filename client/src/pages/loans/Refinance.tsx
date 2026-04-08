@@ -57,8 +57,8 @@ export default function RefinancePage() {
   ];
 
   useSEO({
-    title: "Mortgage Refinance in North DFW TX | Tony Botchev NMLS #114198",
-    description: "Refinance your mortgage in Celina, Prosper, Frisco, and McKinney TX. Rate-and-term, cash-out, VA IRRRL. Tony Botchev (NMLS #114198).",
+    title: "Refinance in North DFW | Lower Your Monthly Payment",
+    description: "Save money or get cash back with a refinance in North DFW. DFW Homes & Loans helps you find better rates & terms to fit your current financial goals perfectly.",
     canonical: "https://www.dfwhome.loans/loans/refinance",
     schema: schema as Record<string, unknown>[],
   });

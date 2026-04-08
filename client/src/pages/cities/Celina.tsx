@@ -66,9 +66,9 @@ export default function CelinaPage() {
   ];
 
   useSEO({
-    title: "Mortgage Lender in Celina TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
+    title: "Mortgage Lender in Celina, TX | Local Home Financing",
     description:
-      "Get pre-approved for a home loan in Celina, TX. Tony Botchev (NMLS #114198) offers conventional, FHA, VA, and USDA mortgages for Celina buyers. No hard credit pull to start.",
+      "Find the perfect house in a growing community. As a mortgage lender in Celina, DFW Homes & Loans provides the local support you need to close on your new home.",
     canonical: "https://www.dfwhome.loans/cities/celina",
     schema: schema as Record<string, unknown>[],
   });

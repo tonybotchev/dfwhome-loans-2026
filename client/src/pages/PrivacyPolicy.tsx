@@ -8,9 +8,9 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function PrivacyPolicy() {
   useSEO({
-    title: "Privacy Policy | DFW Homes & Loans — Tony Botchev NMLS #114198",
+    title: "Privacy Policy | How We Protect Your Personal Info",
     description:
-      "Privacy policy for DFW Homes & Loans. Learn how Tony Botchev and Loan Factory, Inc. collect, use, and protect your personal information.",
+      "Read the privacy policy for DFW Homes & Loans. We are committed to keeping your personal data safe & being clear about how we use and protect your information.",
     canonical: "https://www.dfwhome.loans/privacy-policy",
     noIndex: false,
   });

@@ -45,8 +45,8 @@ const schema = [{
 
 export default function AnnaPage() {
   useSEO({
-    title: "Home Loans in Anna TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "FHA, conventional, and VA home loans in Anna TX. Tony Botchev (NMLS #114198) helps Anna buyers qualify for affordable Collin County homes.",
+    title: "Home Loans in Anna | Simple Financing for Your Home",
+    description: "Start your search for home loans in Anna. DFW Homes & Loans offers friendly, local service to help you finance your dream house in this fast-growing Texas city.",
     canonical: "https://www.dfwhome.loans/cities/anna",
     schema: schema as Record<string, unknown>[],
   });

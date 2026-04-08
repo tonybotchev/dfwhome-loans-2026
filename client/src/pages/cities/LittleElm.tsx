@@ -45,8 +45,8 @@ const schema = [{
 
 export default function LittleElmPage() {
   useSEO({
-    title: "Home Loans in Little Elm TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, FHA, VA, and jumbo home loans in Little Elm TX. Tony Botchev (NMLS #114198) helps Little Elm buyers including lakefront properties.",
+    title: "Home Loans in Little Elm | Local Mortgage Solutions",
+    description: "Explore your options for a house by the lake. DFW Homes & Loans provides easy home financing in Little Elm to help you settle into this vibrant lakeside town.",
     canonical: "https://www.dfwhome.loans/cities/little-elm",
     schema: schema as Record<string, unknown>[],
   });

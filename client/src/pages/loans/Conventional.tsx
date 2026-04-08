@@ -57,8 +57,8 @@ export default function ConventionalPage() {
   ];
 
   useSEO({
-    title: "Conventional Loans in North DFW TX | Tony Botchev NMLS #114198",
-    description: "Conventional home loans in Celina, Prosper, Frisco, and McKinney TX. 3% down, 620+ credit. Tony Botchev (NMLS #114198) helps North DFW buyers qualify.",
+    title: "Conventional Loans in DFW | Financing Options",
+    description: "Learn about conventional loans in DFW. DFW Homes & Loans helps you understand the benefits of standard financing so you can move into your new house with ease.",
     canonical: "https://www.dfwhome.loans/loans/conventional",
     schema: schema as Record<string, unknown>[],
   });

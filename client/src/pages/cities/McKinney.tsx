@@ -46,8 +46,8 @@ const schema = [{
 
 export default function McKinneyPage() {
   useSEO({
-    title: "Home Loans in McKinney TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, FHA, VA, and jumbo home loans in McKinney TX. Tony Botchev (NMLS #114198) serves all of Collin County.",
+    title: "Home Loans in McKinney, TX | Financing Your New Home",
+    description: "Explore your options for home loans in McKinney. DFW Homes & Loans provides easy mortgage tools and local advice to help you join this historic Texas community.",
     canonical: "https://www.dfwhome.loans/cities/mckinney",
     schema: schema as Record<string, unknown>[],
   });

@@ -80,6 +80,14 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Loan pages — Ranked AI additions -->
+  <url>
+    <loc>https://www.dfwhome.loans/loans/usda</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- City pages -->
   <url>
     <loc>https://www.dfwhome.loans/cities/celina</loc>
@@ -132,6 +140,44 @@
   <url>
     <loc>https://www.dfwhome.loans/cities/little-elm</loc>
     <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- City pages — Ranked AI expansion -->
+  <url>
+    <loc>https://www.dfwhome.loans/cities/plano</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities/allen</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities/wylie</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities/lewisville</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities/the-colony</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities/denton</loc>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

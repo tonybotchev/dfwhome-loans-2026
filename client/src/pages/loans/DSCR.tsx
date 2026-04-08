@@ -57,8 +57,8 @@ export default function DSCRPage() {
   ];
 
   useSEO({
-    title: "DSCR Loans for Investors in North DFW TX | Tony Botchev NMLS #114198",
-    description: "DSCR investment loans in Celina, Frisco, McKinney, and North DFW TX. No tax returns. Qualify on rental income. Tony Botchev (NMLS #114198).",
+    title: "DSCR Loans in North DFW | Real Estate Investor Loans",
+    description: "Grow your rental portfolio with DSCR loans in North DFW. DFW Homes & Loans makes it easy for investors to qualify based on income rather than personal pay.",
     canonical: "https://www.dfwhome.loans/loans/dscr",
     schema: schema as Record<string, unknown>[],
   });

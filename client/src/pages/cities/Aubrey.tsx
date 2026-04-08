@@ -45,8 +45,8 @@ const schema = [{
 
 export default function AubreyPage() {
   useSEO({
-    title: "Home Loans in Aubrey TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "FHA, conventional, and VA home loans in Aubrey TX. Tony Botchev (NMLS #114198) helps Aubrey buyers qualify for affordable Denton County homes.",
+    title: "Home Financing in Aubrey, Texas | Your Local Lender",
+    description: "Moving to the horse capital of Texas? DFW Homes & Loans offers mortgage options in Aubrey, TX, to help you buy your next home with confidence and ease.",
     canonical: "https://www.dfwhome.loans/cities/aubrey",
     schema: schema as Record<string, unknown>[],
   });

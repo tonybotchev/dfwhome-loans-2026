@@ -58,8 +58,8 @@ const schema = [
 
 export default function FriscoPage() {
   useSEO({
-    title: "Home Loans in Frisco TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, jumbo, VA, and FHA home loans in Frisco TX. Tony Botchev (NMLS #114198) helps Frisco buyers get pre-approved fast in a competitive market.",
+    title: "Home Loans in Frisco | Fast & Reliable Home Financing",
+    description: "Get pre-approved for home loans in Frisco. DFW Homes & Loans works with you to navigate the competitive Frisco market & secure a mortgage that fits your budget.",
     canonical: "https://www.dfwhome.loans/cities/frisco",
     schema: schema as Record<string, unknown>[],
   });

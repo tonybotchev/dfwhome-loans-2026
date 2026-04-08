@@ -45,8 +45,8 @@ const schema = [{
 
 export default function MelissaPage() {
   useSEO({
-    title: "Home Loans in Melissa TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "FHA, conventional, and VA home loans in Melissa TX. Tony Botchev (NMLS #114198) helps Melissa buyers qualify for affordable Collin County homes.",
+    title: "Mortgages in Melissa, Texas | Home Loans Made Simple",
+    description: "Find the best way to finance your move to Melissa, TX. DFW Homes & Loans offers various loan programs to help you settle down in this charming North Texas town.",
     canonical: "https://www.dfwhome.loans/cities/melissa",
     schema: schema as Record<string, unknown>[],
   });

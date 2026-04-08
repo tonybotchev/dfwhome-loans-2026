@@ -68,9 +68,9 @@ export default function FHAPage() {
   ];
 
   useSEO({
-    title: "FHA Loans in North DFW | Tony Botchev NMLS #114198 | DFW Homes & Loans",
+    title: "FHA Loans in North DFW | Low Down Payment Mortgages",
     description:
-      "FHA home loans in Celina, Prosper, Frisco, and McKinney TX. 3.5% down, 580+ credit score. Tony Botchev (NMLS #114198) helps North DFW buyers qualify for FHA financing.",
+      "Buy a home with a small down payment. DFW Homes & Loans provides FHA loans in North DFW to help buyers with flexible credit scores get the keys to their home.",
     canonical: "https://www.dfwhome.loans/loans/fha",
     schema: schema as Record<string, unknown>[],
   });

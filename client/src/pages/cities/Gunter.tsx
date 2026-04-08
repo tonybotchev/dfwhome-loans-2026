@@ -45,8 +45,8 @@ const schema = [{
 
 export default function GunterPage() {
   useSEO({
-    title: "Home Loans in Gunter TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, FHA, and VA home loans in Gunter TX. Tony Botchev (NMLS #114198) helps Gunter buyers qualify for Grayson County homes and acreage properties.",
+    title: "Home Loans in Gunter | Simple North Texas Financing",
+    description: "Thinking of moving to Gunter? DFW Homes & Loans helps you find the right mortgage for this quiet, growing community so you can buy your next home with confidence.",
     canonical: "https://www.dfwhome.loans/cities/gunter",
     schema: schema as Record<string, unknown>[],
   });

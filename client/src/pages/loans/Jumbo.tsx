@@ -53,8 +53,8 @@ export default function JumboPage() {
   ];
 
   useSEO({
-    title: "Jumbo Loans in North DFW TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Jumbo home loans up to $3M+ in Celina, Prosper, Frisco, and McKinney TX. Tony Botchev (NMLS #114198) specializes in luxury North DFW mortgages.",
+    title: "Jumbo Loans in North DFW | Financing for Luxury Homes",
+    description: "Need a larger loan for a luxury property? DFW Homes & Loans offers jumbo loans in North DFW with competitive rates for high-value homes and larger mortgages.",
     canonical: "https://www.dfwhome.loans/loans/jumbo",
     schema: schema as Record<string, unknown>[],
   });

@@ -59,8 +59,8 @@ const schema = [
 
 export default function ProsperPage() {
   useSEO({
-    title: "Home Loans in Prosper TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, jumbo, VA, and FHA home loans in Prosper TX. Tony Botchev (NMLS #114198) has helped dozens of Prosper families close on time.",
+    title: "Home Loans in Prosper, TX | Simple Mortgage Solutions",
+    description: "Discover home loans in Prosper, TX. DFW Homes & Loans offers personalized service to help you move into one of the most sought-after areas in North Texas.",
     canonical: "https://www.dfwhome.loans/cities/prosper",
     schema: schema as Record<string, unknown>[],
   });

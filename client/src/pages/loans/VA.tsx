@@ -57,8 +57,8 @@ export default function VAPage() {
   ];
 
   useSEO({
-    title: "VA Loans in North DFW TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "VA home loans for veterans and active duty in Celina, Prosper, Frisco, and McKinney TX. 0% down, no PMI. Tony Botchev (NMLS #114198) specializes in VA loans.",
+    title: "VA Loans in North DFW | $0 Down for Veterans & Service",
+    description: "We proudly offer VA loans in North DFW. DFW Homes & Loans helps veterans and active military members buy homes with no down payment and great interest rates.",
     canonical: "https://www.dfwhome.loans/loans/va",
     schema: schema as Record<string, unknown>[],
   });

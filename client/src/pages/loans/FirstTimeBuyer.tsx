@@ -57,8 +57,8 @@ export default function FirstTimeBuyerPage() {
   ];
 
   useSEO({
-    title: "First-Time Home Buyer Programs in North DFW TX | Tony Botchev NMLS #114198",
-    description: "First-time buyer programs with down payment assistance in Celina, Prosper, and North DFW TX. Tony Botchev (NMLS #114198) helps first-time buyers qualify.",
+    title: "First Time Buyer Programs | Start Your Home Journey",
+    description: "Buying your first house? Explore first time buyer programs at DFW Homes & Loans. We guide you through every step to make your first purchase affordable.",
     canonical: "https://www.dfwhome.loans/loans/first-time-buyer",
     schema: schema as Record<string, unknown>[],
   });

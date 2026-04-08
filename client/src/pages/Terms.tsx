@@ -8,9 +8,9 @@ import { useSEO } from "@/hooks/useSEO";
 
 export default function Terms() {
   useSEO({
-    title: "Terms of Service | DFW Homes & Loans — Tony Botchev NMLS #114198",
+    title: "Terms of Service | Website Usage & Legal Guidelines",
     description:
-      "Terms of service for dfwhome.loans. Review the terms governing use of the DFW Homes & Loans website.",
+      "View the terms of service for DFW Homes & Loans. This page explains the rules for using our website and what you can expect when working with our online tools.",
     canonical: "https://www.dfwhome.loans/terms",
     noIndex: false,
   });

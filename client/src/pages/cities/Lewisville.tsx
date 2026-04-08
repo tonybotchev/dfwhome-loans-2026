@@ -1,65 +1,50 @@
 import CityPageTemplate, { CityPageData } from "@/components/CityPageTemplate";
 import { useSEO } from "@/hooks/useSEO";
-
 const data: CityPageData = {
   city: "Lewisville", state: "TX", county: "Denton", slug: "lewisville",
-  tagline: "Established Denton County city with great value, Lake Lewisville access, and easy DFW connectivity.",
-  intro: "Lewisville TX sits at the heart of Denton County, offering buyers an established community with mature trees, diverse neighborhoods, and excellent access to both Dallas and Fort Worth via I-35E. With Lake Lewisville on its doorstep and a housing market that offers strong value, Lewisville attracts first-time buyers, families, and investors alike. Tony Botchev helps Lewisville buyers get pre-approved quickly and close with confidence.",
+  tagline: "Central DFW location, Lake Lewisville access, and a diverse housing market near the heart of the metroplex.",
+  intro: "Lewisville TX is a centrally located city in Denton County offering quick access to both Dallas and Fort Worth via I-35E. Known for Lake Lewisville, a diverse dining and retail scene, and affordable housing compared to neighboring Frisco and Flower Mound, Lewisville is a practical choice for buyers who want to stay connected to the entire DFW metroplex.",
   highlights: [
     { label: "County", value: "Denton" },
-    { label: "Median Home Price", value: "~$370,000" },
+    { label: "Median Home Price", value: "~$350,000" },
     { label: "School District", value: "Lewisville ISD" },
     { label: "Conforming Loan Limit", value: "$766,550" },
-    { label: "Notable Areas", value: "Castle Hills, Old Town, Lakeland Hills" },
-    { label: "New Construction", value: "Limited — established neighborhoods" },
+    { label: "Highway Access", value: "I-35E, SH-121, SH-121 Business" },
+    { label: "Notable", value: "Lake Lewisville, Lewisville Lake Park" },
   ],
   loanTypes: [
-    { name: "Conventional", desc: "Best for Lewisville buyers with solid credit and income.", href: "/loans/conventional" },
-    { name: "FHA Loans", desc: "3.5% down for Lewisville first-time buyers with 580+ credit.", href: "/loans/fha" },
-    { name: "VA Loans", desc: "0% down for veterans buying in Lewisville TX.", href: "/loans/va" },
-    { name: "Jumbo", desc: "Loans above $766,550 for Lewisville luxury homes.", href: "/loans/jumbo" },
-    { name: "First-Time Buyer", desc: "Down payment assistance for qualifying Lewisville buyers.", href: "/loans/first-time-buyer" },
-    { name: "DSCR Investor", desc: "Investment property loans in Lewisville — qualify on rental income.", href: "/loans/dscr" },
+    { name: "Conventional", desc: "Standard purchase loans for Lewisville homes.", href: "/loans/conventional" },
+    { name: "FHA Loans", desc: "3.5% down for Lewisville buyers with 580+ credit.", href: "/loans/fha" },
+    { name: "VA Loans", desc: "0% down for veterans buying in Lewisville.", href: "/loans/va" },
+    { name: "First-Time Buyer", desc: "Down payment assistance for first-time Lewisville buyers.", href: "/loans/first-time-buyer" },
+    { name: "DSCR Investor", desc: "Investment loans for Lewisville rental properties.", href: "/loans/dscr" },
+    { name: "Refinance", desc: "Lower your rate or access equity in your Lewisville home.", href: "/loans/refinance" },
   ],
   faqs: [
-    { q: "What is the average home price in Lewisville TX?", a: "As of 2026, the median home price in Lewisville TX is approximately $370,000. Prices range from $280,000 for older single-family homes to $700,000+ in upscale communities like Castle Hills." },
-    { q: "Is Lewisville TX a good place to buy a home?", a: "Lewisville offers excellent value in Denton County. Lewisville ISD is a large, well-regarded district, and the city's location on I-35E provides easy access to both Dallas and Fort Worth. Lake Lewisville adds significant lifestyle appeal." },
-    { q: "What loan programs are available in Lewisville TX?", a: "Tony Botchev offers all major loan programs in Lewisville: conventional, FHA, VA, jumbo, DSCR investor loans, and first-time homebuyer programs with down payment assistance. Most buyers are pre-approved within 24 hours." },
-    { q: "Are there investment properties available in Lewisville TX?", a: "Yes. Lewisville has a strong rental market due to its central DFW location and proximity to major employers. DSCR loans allow investors to qualify based on the property's rental income rather than personal tax returns." },
-    { q: "How far is Lewisville TX from Dallas and Fort Worth?", a: "Lewisville is approximately 25 miles north of downtown Dallas (30–40 minutes via I-35E) and 35 miles northeast of downtown Fort Worth (40–50 minutes). It's one of the most centrally located cities in the DFW metroplex." },
+    { q: "What is the average home price in Lewisville TX?", a: "As of 2026, the median home price in Lewisville TX is approximately $350,000, making it one of the more affordable options in Denton County. Prices range from $250,000 for older homes to $600,000+ for newer builds near the lake." },
+    { q: "Is Lewisville TX a good place to buy a home?", a: "Lewisville offers strong value for buyers who want central DFW access without Frisco or Plano price tags. Its location on I-35E puts buyers within 30 minutes of both Dallas and Fort Worth." },
+    { q: "What school district serves Lewisville TX?", a: "Most of Lewisville is served by Lewisville ISD, one of the largest school districts in Texas with over 50,000 students and multiple specialized programs including STEM and fine arts academies." },
+    { q: "Are there waterfront homes available in Lewisville TX?", a: "Yes — Lake Lewisville has several neighborhoods with water access and lake views. These properties typically require conventional or jumbo financing depending on price point. Tony Botchev can help identify the right program." },
   ],
   nearbyLinks: [
-    { city: "Little Elm", href: "/cities/little-elm" },
     { city: "Frisco", href: "/cities/frisco" },
-    { city: "Denton", href: "/cities/denton" },
-    { city: "Aubrey", href: "/cities/aubrey" },
+    { city: "Little Elm", href: "/cities/little-elm" },
     { city: "Prosper", href: "/cities/prosper" },
+    { city: "Celina", href: "/cities/celina" },
   ],
 };
-
 const schema = [{
-  "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "name": "DFW Homes & Loans — Lewisville TX",
-  "description": "Home loans in Lewisville TX. Tony Botchev NMLS #114198 offers conventional, FHA, VA, jumbo, and DSCR loans to Lewisville homebuyers and investors.",
-  "url": "https://www.dfwhome.loans/cities/lewisville",
-  "areaServed": { "@type": "City", "name": "Lewisville", "containedInPlace": { "@type": "State", "name": "Texas" } },
-  "telephone": "+19453708656",
-  "employee": { "@type": "Person", "name": "Tony Botchev", "identifier": { "@type": "PropertyValue", "name": "NMLS", "value": "114198" } },
-}, {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": data.faqs.map(f => ({
-    "@type": "Question",
-    "name": f.q,
-    "acceptedAnswer": { "@type": "Answer", "text": f.a },
-  })),
+  "@context": "https://schema.org", "@type": "FinancialService",
+  name: "DFW Homes & Loans — Lewisville TX",
+  description: "Home loans in Lewisville TX. Tony Botchev NMLS #114198.",
+  url: "https://www.dfwhome.loans/cities/lewisville",
+  areaServed: { "@type": "City", name: "Lewisville", containedInPlace: { "@type": "State", name: "Texas" } },
+  telephone: "+19453708656",
 }];
-
 export default function LewisvillePage() {
   useSEO({
-    title: "Home Loans in Lewisville TX | Tony Botchev NMLS #114198 | DFW Homes & Loans",
-    description: "Conventional, FHA, VA, jumbo, and DSCR home loans in Lewisville TX. Tony Botchev (NMLS #114198) serves all of Denton County. Pre-approval in 24 hours.",
+    title: "Home Loans in Lewisville | Easy Mortgage Pre-Approval",
+    description: "Ready to buy in Lewisville, TX? DFW Homes & Loans offers mortgage programs to help you secure a home near the heart of the Dallas-Fort Worth metroplex.",
     canonical: "https://www.dfwhome.loans/cities/lewisville",
     schema: schema as Record<string, unknown>[],
   });
