@@ -160,7 +160,7 @@ export default function Calculator() {
             </div>
 
             <button
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" })}
               className="btn-primary-kt w-full text-base py-4 mt-4"
             >
               <span className="flex items-center justify-center gap-2">

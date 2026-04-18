@@ -167,7 +167,7 @@ export default function Footer() {
                   Book a Free Consultation →
                 </span>
               </Link>
-              <Link href="/#contact">
+              <Link href="/#prequal">
                 <span className="font-['Outfit'] text-xs text-center block transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer" style={{ color: "oklch(0.65 0.02 85)" }}>
                   Or Get Pre-Qualified Free →
                 </span>

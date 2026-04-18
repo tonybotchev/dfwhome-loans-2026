@@ -44,10 +44,10 @@ export default function Navbar() {
   const handleGetPreQualified = () => {
     setMenuOpen(false);
     if (isHomepage) {
-      const el = document.querySelector("#contact");
+      const el = document.querySelector("#prequal");
       if (el) el.scrollIntoView({ behavior: "smooth" });
     } else {
-      window.location.href = "/#contact";
+      window.location.href = "/#prequal";
     }
   };
 

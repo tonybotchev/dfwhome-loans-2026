@@ -115,7 +115,7 @@ function LoanCard({ loan, index }: { loan: typeof loans[0]; index: number }) {
   }, []);
 
   const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -287,7 +287,7 @@ export default function LoanPrograms() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <button
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" })}
             className="btn-primary-kt text-base px-10 py-4"
           >
             <span className="flex items-center gap-2">

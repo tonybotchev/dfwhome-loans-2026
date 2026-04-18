@@ -32,7 +32,7 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToBooking = () => {

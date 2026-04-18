@@ -27,31 +27,33 @@ import {
 import NMLSDisclosure from "./NMLSDisclosure";
 import { trackLeadFormSubmit } from "@/lib/analytics";
 
-// ─── GHL Config ────────────────────────────────────────────────────────────────
-const GHL_API_KEY    = "pit-b53e36a0-81dc-4311-80e1-2e409b8715d2";
+// ─── GHL Config (IDs only — token is server-side) ─────────────────────────────
 const GHL_LOCATION   = "4mO3eTmt4MzqY4CfnMGW";
 const PIPELINE_ID    = "LDVnhpPD75zLj8I1Rfzs";
 const STAGE_NEW_LEAD = "de32f2b3-e94c-4956-8ef0-6a46f62ada3d";
 const STAGE_PREQUAL  = "cae260c7-ccc6-47cc-a6e5-8bcc9f7a7cc9";
 
 const CF = {
-  loanType:       "4j2o73jUu00rIrR95mwh",
-  propertyType:   "PleATadF1mdSY6tEWhAm",
-  purchasePrice:  "I6XAmJf9wzQHtemGiQQ5",
-  downPayment:    "aY6ZHiAxJck1nyywbkVZ",
-  creditScore:    "B5VYu7zxYa69UScFPdRP",
-  creditScoreRaw: "HUk7yVEdXSMD7V5Y5EKP",
-  annualIncome:   "9lVvOGHAGmIHueJwdqBT",
-  monthlyDebts:   "Zb8ps6F4TjmpTOarM9jw",
-  firstTimeBuyer: "pbfDtJWzoUK2ctxFdI1V",
-  hasRealtor:     "AWMO6QL5hJuWFA1YYJie",
-  timeline:       "MJgL2zuaeJeHXfYDRBMo",
-  purchaseTimeline:"xKs581iRSjxW9FpFRH7K",
-  leadSource:     "GPqqpLvQBv2cxr0SM31k",
-  leadScore:      "4ch4JForczgQs6fAvSaM",
-  leadTemp:       "29sOCVVX7J9gHzMSwexh",
-  smsConsent:     "07qG13d3oMG2TLGnfL5V",
-  notes:          "Z08mxQrtz0qx4BymQ9Bq",
+  loanPurpose:      "N1SdIoSQp1QY3GpQb8YF",   // TEXT — separate from loanType
+  loanType:         "4j2o73jUu00rIrR95mwh",   // TEXT
+  propertyType:     "PleATadF1mdSY6tEWhAm",   // SINGLE_OPTIONS
+  purchasePriceTxt: "FNN5byLMGjwY0oSouIaN",   // TEXT — human-readable price
+  purchasePrice:    "I6XAmJf9wzQHtemGiQQ5",   // MONETARY — numeric
+  downPayment:      "aY6ZHiAxJck1nyywbkVZ",   // MONETARY
+  creditScoreRange: "B5VYu7zxYa69UScFPdRP",   // SINGLE_OPTIONS
+  creditScore:      "HUk7yVEdXSMD7V5Y5EKP",   // TEXT
+  annualIncome:     "9lVvOGHAGmIHueJwdqBT",   // TEXT
+  monthlyDebts:     "Zb8ps6F4TjmpTOarM9jw",   // TEXT
+  firstTimeBuyer:   "pbfDtJWzoUK2ctxFdI1V",   // TEXT
+  hasRealtor:       "AWMO6QL5hJuWFA1YYJie",   // TEXT
+  timeline:         "MJgL2zuaeJeHXfYDRBMo",   // TEXT
+  purchaseTimeline: "xKs581iRSjxW9FpFRH7K",   // SINGLE_OPTIONS
+  leadSource:       "GPqqpLvQBv2cxr0SM31k",   // TEXT
+  leadScore:        "4ch4JForczgQs6fAvSaM",   // TEXT
+  leadTemp:         "29sOCVVX7J9gHzMSwexh",   // TEXT
+  yourMessage:      "GZpKcFRoIiVA398CD2G4",   // LARGE_TEXT
+  smsConsent:       "07qG13d3oMG2TLGnfL5V",   // CHECKBOX — must be ["Yes"]
+  notes:            "Z08mxQrtz0qx4BymQ9Bq",   // LARGE_TEXT
 };
 
 // ─── Steps ─────────────────────────────────────────────────────────────────────
@@ -197,7 +199,6 @@ type FormData = typeof INIT;
 
 export default function PreQualForm() {
   const [step, setStep] = useState(1);
-  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [data, setData] = useState<FormData>(INIT);
@@ -214,11 +215,11 @@ export default function PreQualForm() {
     if (step === 5) return !!data.coBorrower;
     if (step === 6) return !!data.timeline && !!data.hasRealtor && !!data.firstTimeBuyer;
     if (step === 7) return !!data.bankruptcy && !!data.foreclosure && !!data.currentlyRenting;
-    if (step === 8) return !!data.firstName && !!data.phone && !!data.email && data.smsConsent;
+    if (step === 8) return !!data.firstName && !!data.lastName && !!data.phone && !!data.email && data.smsConsent;
     return false;
   };
 
-  // ── GHL Submit ───────────────────────────────────────────────────────────────
+  // ── Submit via server-side proxy ─────────────────────────────────────────────
   const handleSubmit = async () => {
     setLoading(true);
     setError("");
@@ -240,102 +241,67 @@ export default function PreQualForm() {
         `LEAD SCORE: ${score} | TEMPERATURE: ${temp}`,
       ].join("\n");
 
-      // 1. Create contact
-      const contactRes = await fetch("https://services.leadconnectorhq.com/contacts/", {
+      const stageId = score >= 80 ? STAGE_PREQUAL : STAGE_NEW_LEAD;
+
+      const res = await fetch("/api/ghl-submit", {
         method: "POST",
-        headers: {
-          "Authorization": `Bearer ${GHL_API_KEY}`,
-          "Version": "2021-07-28",
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          locationId: GHL_LOCATION,
           firstName: data.firstName,
           lastName: data.lastName,
           phone: data.phone,
           email: data.email,
           tags,
+          source: "dfwhome.loans website",
           customFields: [
-            { id: CF.loanType,        value: data.loanType },
-            { id: CF.propertyType,    value: data.propertyType },
-            { id: CF.purchasePrice,   value: data.purchasePrice },
-            { id: CF.downPayment,     value: data.downPayment },
-            { id: CF.creditScore,     value: data.creditScore },
-            { id: CF.creditScoreRaw,  value: data.creditScore },
-            { id: CF.annualIncome,    value: data.annualIncome },
-            { id: CF.monthlyDebts,    value: data.monthlyDebts },
-            { id: CF.firstTimeBuyer,  value: data.firstTimeBuyer },
-            { id: CF.hasRealtor,      value: data.hasRealtor },
-            { id: CF.timeline,        value: data.timeline },
-            { id: CF.purchaseTimeline,value: data.timeline },
-            { id: CF.leadSource,      value: "Website Pre-Qual Form" },
-            { id: CF.leadScore,       value: String(score) },
-            { id: CF.leadTemp,        value: temp },
-            { id: CF.smsConsent,      value: "true" },
-            { id: CF.notes,           value: notes },
+            { id: CF.loanPurpose,      value: data.propertyIntent },
+            { id: CF.loanType,         value: data.loanType },
+            { id: CF.propertyType,     value: data.propertyType },
+            { id: CF.purchasePriceTxt, value: data.purchasePrice },
+            { id: CF.purchasePrice,    value: data.purchasePrice },
+            { id: CF.downPayment,      value: data.downPayment },
+            { id: CF.creditScoreRange, value: data.creditScore },
+            { id: CF.creditScore,      value: data.creditScore },
+            { id: CF.annualIncome,     value: data.annualIncome },
+            { id: CF.monthlyDebts,     value: data.monthlyDebts },
+            { id: CF.firstTimeBuyer,   value: data.firstTimeBuyer },
+            { id: CF.hasRealtor,       value: data.hasRealtor },
+            { id: CF.timeline,         value: data.timeline },
+            { id: CF.purchaseTimeline, value: data.timeline },
+            { id: CF.leadSource,       value: "Website Pre-Qual Form" },
+            { id: CF.leadScore,        value: String(score) },
+            { id: CF.leadTemp,         value: temp },
+            { id: CF.smsConsent,       value: ["Yes"] },
+            { id: CF.notes,            value: notes },
           ],
+          // Opportunity details — assigned to Tony
+          opportunityName: `${data.firstName} ${data.lastName} - ${data.loanType} ${data.propertyIntent}`,
+          pipelineStageId: stageId,
+          monetaryValue: parseFloat(data.purchasePrice?.replace(/[^0-9.]/g, "") || "0"),
         }),
       });
 
-      if (!contactRes.ok) throw new Error("Contact creation failed");
-      const contactData = await contactRes.json();
-      const contactId = contactData?.contact?.id;
-
-      // 2. Add to Mortgage Pipeline
-      if (contactId) {
-        const stageId = score >= 80 ? STAGE_PREQUAL : STAGE_NEW_LEAD;
-        await fetch("https://services.leadconnectorhq.com/opportunities/", {
-          method: "POST",
-          headers: {
-            "Authorization": `Bearer ${GHL_API_KEY}`,
-            "Version": "2021-07-28",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            pipelineId: PIPELINE_ID,
-            locationId: GHL_LOCATION,
-            name: `${data.firstName} ${data.lastName} — ${data.loanType} [${temp}]`,
-            pipelineStageId: stageId,
-            contactId,
-            status: "open",
-            monetaryValue: parseFloat(data.purchasePrice?.replace(/[^0-9.]/g, "") || "0"),
-          }),
-        });
+      if (!res.ok) {
+        const errData = await res.json().catch(() => ({}));
+        throw new Error(errData.error || "Submission failed");
       }
 
-      setSubmitted(true);
       trackLeadFormSubmit('pre_qualification');
+
+      // Redirect to thank-you page
+      window.location.href = `/thank-you?name=${encodeURIComponent(data.firstName)}`;
     } catch {
-      setError("Something went wrong. Please call us at (945) 294-5020.");
+      setError("Something went wrong. Please call us at (945) 370-8656.");
     } finally {
       setLoading(false);
     }
   };
 
-  // ── Success Screen ───────────────────────────────────────────────────────────
-  if (submitted) {
-    return (
-      <section id="prequal" className="py-24 md:py-32" style={{ background: "oklch(0.15 0.04 155)" }}>
-        <div className="container max-w-2xl mx-auto text-center">
-          <CheckCircle2 size={64} style={{ color: "oklch(0.62 0.16 42)", margin: "0 auto 1.5rem" }} />
-          <h2 className="font-display mb-4" style={{ fontSize: "clamp(2rem, 4vw, 3rem)", color: "oklch(0.975 0.008 85)" }}>
-            YOU'RE ON YOUR WAY
-          </h2>
-          <p className="font-['Outfit'] text-lg mb-2" style={{ color: "oklch(0.78 0.02 85)" }}>
-            Tony will personally review your file and reach out within 1 hour.
-          </p>
-          <p className="font-['Outfit'] text-sm mb-8" style={{ color: "oklch(0.62 0.16 42)" }}>
-            Check your phone — NOVA may reach out via text right away to get you started.
-          </p>
-          <NMLSDisclosure variant="form" />
-        </div>
-      </section>
-    );
-  }
-
   // ── Main Render ──────────────────────────────────────────────────────────────
   return (
     <section id="prequal" className="py-24 md:py-32" style={{ background: "oklch(0.15 0.04 155)" }}>
+      {/* Also keep id="contact" so existing links still scroll here */}
+      <div id="contact" style={{ position: "absolute", marginTop: "-120px" }} />
       <div className="container max-w-3xl mx-auto">
 
         {/* Header */}
@@ -768,7 +734,7 @@ export default function PreQualForm() {
                 </Field>
                 <Field label="Last Name">
                   <input type="text" placeholder="Smith" value={data.lastName}
-                    onChange={e => set("lastName", e.target.value)} style={S.input} />
+                    onChange={e => set("lastName", e.target.value)} style={S.input} required />
                 </Field>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">

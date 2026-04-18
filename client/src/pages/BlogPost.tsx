@@ -187,7 +187,7 @@ export default function BlogPost() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center">
             <Link
-              href="/#contact"
+              href="/#prequal"
               className="bg-[#C4521A] text-white px-8 py-3 font-semibold hover:bg-[#A8431A] transition-colors"
             >
               Get Pre-Qualified Free →

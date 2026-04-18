@@ -48,7 +48,7 @@ const directAnswers = [
     q: "How Do I Get Pre-Approved for a Home Loan in Celina, Texas?",
     a: "To get pre-approved for a home loan in Celina, Texas, borrowers typically provide income documents, asset verification, and credit authorization. A local mortgage advisor reviews your financial profile and issues a pre-approval letter that strengthens your offer when purchasing a home. Contact Tony Botchev at DFW Homes & Loans to start the process.",
     cta: "Start your pre-approval here.",
-    ctaHref: "#contact",
+    ctaHref: "#prequal",
   },
   {
     q: "Trusted Mortgage Advisor in Celina, TX",
@@ -122,7 +122,7 @@ export default function AEOContent() {
                 {item.answer}
               </p>
               <button
-                onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+                onClick={() => document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" })}
                 className="flex items-center gap-1 font-['Outfit'] text-xs font-600 uppercase tracking-wider group"
                 style={{ color: "oklch(0.62 0.16 42)" }}
               >
@@ -187,10 +187,10 @@ export default function AEOContent() {
             { label: "Loan programs in North DFW", href: "#loans" },
             { label: "About Tony Botchev", href: "#about" },
             { label: "Mortgage solutions", href: "#loans" },
-            { label: "Celina mortgage advisor", href: "#contact" },
-            { label: "Prosper TX home loans", href: "#contact" },
-            { label: "Frisco mortgage lender", href: "#contact" },
-            { label: "Get pre-approved in Celina, TX", href: "#contact" },
+            { label: "Celina mortgage advisor", href: "#prequal" },
+            { label: "Prosper TX home loans", href: "#prequal" },
+            { label: "Frisco mortgage lender", href: "#prequal" },
+            { label: "Get pre-approved in Celina, TX", href: "#prequal" },
           ].map((link) => (
             <button
               key={link.label}
