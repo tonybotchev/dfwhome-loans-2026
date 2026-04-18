@@ -24,7 +24,7 @@ import DSCR from "./pages/loans/DSCR";
 import Jumbo from "./pages/loans/Jumbo";
 import USDA from "./pages/loans/USDA";
 
-// City pages — original
+// City pages
 import Celina from "./pages/cities/Celina";
 import Prosper from "./pages/cities/Prosper";
 import Frisco from "./pages/cities/Frisco";
@@ -40,14 +40,6 @@ import Denton from "./pages/cities/Denton";
 import Wylie from "./pages/cities/Wylie";
 import Lewisville from "./pages/cities/Lewisville";
 import TheColony from "./pages/cities/TheColony";
-
-// City pages — Ranked AI expansion
-import Plano from "./pages/cities/Plano";
-import Allen from "./pages/cities/Allen";
-import Wylie from "./pages/cities/Wylie";
-import Lewisville from "./pages/cities/Lewisville";
-import TheColony from "./pages/cities/TheColony";
-import Denton from "./pages/cities/Denton";
 
 function Router() {
   return (
@@ -71,7 +63,7 @@ function Router() {
       <Route path="/loans/jumbo" component={Jumbo} />
       <Route path="/loans/usda" component={USDA} />
 
-      {/* City pages — original */}
+      {/* City pages */}
       <Route path="/cities/celina" component={Celina} />
       <Route path="/cities/prosper" component={Prosper} />
       <Route path="/cities/frisco" component={Frisco} />
@@ -87,14 +79,6 @@ function Router() {
       <Route path="/cities/wylie" component={Wylie} />
       <Route path="/cities/lewisville" component={Lewisville} />
       <Route path="/cities/the-colony" component={TheColony} />
-
-      {/* City pages — Ranked AI expansion */}
-      <Route path="/cities/plano" component={Plano} />
-      <Route path="/cities/allen" component={Allen} />
-      <Route path="/cities/wylie" component={Wylie} />
-      <Route path="/cities/lewisville" component={Lewisville} />
-      <Route path="/cities/the-colony" component={TheColony} />
-      <Route path="/cities/denton" component={Denton} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
