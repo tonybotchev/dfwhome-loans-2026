@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
+import { trackPhoneClick } from "@/lib/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -25,6 +26,7 @@ export default function Navbar() {
     { label: "Process", href: "#process", type: "scroll" },
     { label: "About Tony", href: "#about", type: "scroll" },
     { label: "Blog", href: "/blog", type: "link" },
+    { label: "Book a Call", href: "#book-call", type: "scroll" },
   ];
 
   const handleNavClick = (href: string) => {
@@ -110,6 +112,7 @@ export default function Navbar() {
               href="tel:+19453708656"
               className="flex items-center gap-2 font-['Outfit'] font-600 text-sm tracking-wide transition-colors"
               style={{ color: "oklch(0.975 0.008 85)" }}
+              onClick={() => trackPhoneClick()}
             >
               <Phone size={15} />
               (945) 370-8656
@@ -172,6 +175,7 @@ export default function Navbar() {
               href="tel:+19453708656"
               className="flex items-center gap-2 font-['Outfit'] font-600 text-lg"
               style={{ color: "oklch(0.62 0.16 42)" }}
+              onClick={() => trackPhoneClick()}
             >
               <Phone size={18} />
               (945) 370-8656

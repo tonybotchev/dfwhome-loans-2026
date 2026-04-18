@@ -56,6 +56,8 @@ export default function PreApproval() {
                 src={TEXAS_HOME}
                 alt="Modern farmhouse home in Celina Texas"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               {/* Overlay tag */}
               <div

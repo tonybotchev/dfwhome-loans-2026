@@ -25,6 +25,7 @@ import {
   Users, Calendar, FileText, User
 } from "lucide-react";
 import NMLSDisclosure from "./NMLSDisclosure";
+import { trackLeadFormSubmit } from "@/lib/analytics";
 
 // ─── GHL Config ────────────────────────────────────────────────────────────────
 const GHL_API_KEY    = "pit-b53e36a0-81dc-4311-80e1-2e409b8715d2";
@@ -303,6 +304,7 @@ export default function PreQualForm() {
       }
 
       setSubmitted(true);
+      trackLeadFormSubmit('pre_qualification');
     } catch {
       setError("Something went wrong. Please call us at (945) 294-5020.");
     } finally {
@@ -814,9 +816,9 @@ export default function PreQualForm() {
                     (Tony Botchev, NMLS #114198 | Loan Factory, Inc. NMLS #320841) regarding my mortgage inquiry.
                     Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe.
                     Reply HELP for help. Consent is not required to obtain services.{" "}
-                    <a href="#" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Privacy Policy</a>{" "}
+                    <a href="/privacy" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Privacy Policy</a>{" "}
                     &amp;{" "}
-                    <a href="#" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Terms</a>
+                    <a href="/terms" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Terms</a>
                   </span>
                 </label>
               </div>

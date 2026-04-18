@@ -273,6 +273,14 @@
   .card-flip-container:hover .card-flip-inner {
     transform: rotateY(180deg);
   }
+  @media (max-width: 767px) {
+    .card-flip-container:hover .card-flip-inner {
+      transform: none; /* Disable hover flip on mobile */
+    }
+    .card-flip-inner.flipped {
+      transform: rotateY(180deg);
+    }
+  }
   .card-flip-front,
   .card-flip-back {
     position: absolute;

@@ -80,6 +80,8 @@ export default function BlogPost() {
             src={post.image}
             alt={post.title}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1B2B1A]/80 via-[#1B2B1A]/40 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12">
@@ -216,6 +218,8 @@ export default function BlogPost() {
                       src={related.image}
                       alt={related.title}
                       className="w-full h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                   <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${categoryColors[related.category] || "bg-gray-100 text-gray-700"}`}>

@@ -11,10 +11,17 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { blogPosts, categoryColors } from "@/lib/blogData";
+import { useSEO } from "@/hooks/useSEO";
 
 export default function Blog() {
   const featured = blogPosts[0];
   const rest = blogPosts.slice(1);
+
+  useSEO({
+    title: "Mortgage Blog | DFW Homes & Loans — North DFW Tips & Guides",
+    description: "Expert mortgage tips, DFW market updates, and homebuyer guides from Tony Botchev at DFW Homes & Loans. Serving Celina, Prosper, Frisco, McKinney and North Texas.",
+    canonical: "https://www.dfwhome.loans/blog",
+  });
 
   return (
     <div className="min-h-screen" style={{ background: "oklch(0.975 0.008 85)" }}>
@@ -87,6 +94,8 @@ export default function Blog() {
                 src={featured.image}
                 alt={featured.title}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
               <span
@@ -171,6 +180,8 @@ export default function Blog() {
                     src={post.image}
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
