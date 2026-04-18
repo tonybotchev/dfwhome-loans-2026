@@ -3,6 +3,7 @@
 */
 import { useState, useEffect } from "react";
 import { Phone, MessageCircle } from "lucide-react";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
 export default function FloatingCTA() {
   const [visible, setVisible] = useState(false);
@@ -29,6 +30,7 @@ export default function FloatingCTA() {
         className="w-12 h-12 flex items-center justify-center shadow-lg transition-transform hover:scale-110"
         style={{ background: "#25D366" }}
         aria-label="WhatsApp Tony"
+        onClick={() => trackWhatsAppClick()}
       >
         <MessageCircle size={22} color="white" />
       </a>
@@ -37,6 +39,7 @@ export default function FloatingCTA() {
         className="w-12 h-12 flex items-center justify-center shadow-lg transition-transform hover:scale-110"
         style={{ background: "oklch(0.62 0.16 42)" }}
         aria-label="Call Tony"
+        onClick={() => trackPhoneClick()}
       >
         <Phone size={20} color="oklch(0.975 0.008 85)" />
       </a>

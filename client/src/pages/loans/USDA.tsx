@@ -93,7 +93,7 @@ export default function USDAPage() {
             No down payment, lower mortgage insurance than FHA, and competitive rates.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/#contact" className="bg-[#C4521A] text-white px-8 py-4 font-semibold hover:bg-[#A8431A] transition-colors">
+            <Link href="/#prequal" className="bg-[#C4521A] text-white px-8 py-4 font-semibold hover:bg-[#A8431A] transition-colors">
               Check Your Eligibility →
             </Link>
             <a href="tel:+19453708656" className="flex items-center gap-2 text-white/80 hover:text-white transition-colors">
@@ -163,7 +163,7 @@ export default function USDAPage() {
           </div>
           <div className="mt-6 p-4 bg-[#1B2B1A]/5 border border-[#1B2B1A]/10 text-sm text-[#4A5568]">
             USDA eligibility is property-specific. Tony Botchev can check any address in seconds.{" "}
-            <Link href="/#contact" className="text-[#C4521A] font-semibold">
+            <Link href="/#prequal" className="text-[#C4521A] font-semibold">
               Get a free eligibility check →
             </Link>
           </div>
@@ -279,7 +279,7 @@ export default function USDAPage() {
             No hard credit pull to start. Find out in minutes if your property qualifies.
           </p>
           <Link
-            href="/#contact"
+            href="/#prequal"
             className="inline-block bg-[#C4521A] text-white px-10 py-4 font-semibold text-lg hover:bg-[#A8431A] transition-colors"
           >
             Get Pre-Qualified Free →

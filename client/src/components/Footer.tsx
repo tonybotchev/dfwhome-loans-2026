@@ -4,6 +4,7 @@
 import { Phone, Mail, MessageCircle } from "lucide-react";
 import { Link } from "wouter";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
+import { trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
 const loanLinks = [
   { label: "Conventional Loans", href: "/loans/conventional" },
@@ -140,7 +141,7 @@ export default function Footer() {
               Contact Tony
             </h4>
             <div className="space-y-4">
-              <a href="tel:+19453708656" className="flex items-center gap-3 group">
+              <a href="tel:+19453708656" className="flex items-center gap-3 group" onClick={() => trackPhoneClick()}>
                 <Phone size={15} style={{ color: "oklch(0.62 0.16 42)" }} />
                 <span className="font-['Outfit'] text-sm group-hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.65 0.02 85)" }}>
                   (945) 370-8656
@@ -152,7 +153,7 @@ export default function Footer() {
                   tony@dfwhome.loans
                 </span>
               </a>
-              <a href="https://wa.me/19453708656" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
+              <a href="https://wa.me/19453708656" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group" onClick={() => trackWhatsAppClick()}>
                 <MessageCircle size={15} style={{ color: "oklch(0.62 0.16 42)" }} />
                 <span className="font-['Outfit'] text-sm group-hover:text-[oklch(0.62_0.16_42)] transition-colors" style={{ color: "oklch(0.65 0.02 85)" }}>
                   WhatsApp Tony
@@ -160,10 +161,15 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="mt-6">
-              <Link href="/#contact">
+            <div className="mt-6 space-y-3">
+              <Link href="/#book-call">
                 <span className="btn-primary-kt text-xs px-5 py-2.5 w-full inline-block text-center cursor-pointer">
-                  Get Pre-Qualified Free →
+                  Book a Free Consultation →
+                </span>
+              </Link>
+              <Link href="/#prequal">
+                <span className="font-['Outfit'] text-xs text-center block transition-colors hover:text-[oklch(0.62_0.16_42)] cursor-pointer" style={{ color: "oklch(0.65 0.02 85)" }}>
+                  Or Get Pre-Qualified Free →
                 </span>
               </Link>
             </div>

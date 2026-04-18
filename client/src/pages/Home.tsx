@@ -10,7 +10,6 @@ import Testimonials from "@/components/Testimonials";
 import PreApproval from "@/components/PreApproval";
 import PreQualForm from "@/components/PreQualForm";
 import Calculator from "@/components/Calculator";
-import ContactForm from "@/components/ContactForm";
 import FAQ from "@/components/FAQ";
 import AEOContent from "@/components/AEOContent";
 import BookingWidget from "@/components/BookingWidget";
@@ -29,7 +28,6 @@ export default function Home() {
       <PreApproval />
       <PreQualForm />
       <Calculator />
-      <ContactForm />
       <FAQ />
       <BookingWidget />
       <AEOContent />

@@ -23,6 +23,103 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: "jumbo-loans-north-dfw-2026",
+    slug: "jumbo-loans-north-dfw-2026",
+    title: "Jumbo Loans in North DFW: The 2026 Complete Guide",
+    excerpt:
+      "Buying a luxury home in Frisco, Southlake, Westlake, or Prosper? Tony Botchev breaks down everything you need to know about jumbo loans in North DFW for 2026 — requirements, rates, and how to qualify.",
+    category: "Loan Education",
+    date: "April 10, 2026",
+    dateISO: "2026-04-10",
+    readTime: "7 min read",
+    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+    featured: false,
+    seoTitle: "Jumbo Loans in North DFW: The 2026 Complete Guide | Tony Botchev NMLS #114198",
+    seoDescription:
+      "Everything high-net-worth homebuyers need to know about jumbo loans in Frisco, Southlake, Westlake, Prosper, and Celina in 2026. Requirements, rates, and expert guidance from Tony Botchev.",
+    faq: [
+      {
+        q: "What is the current jumbo loan limit in North Dallas-Fort Worth for 2026?",
+        a: "In most parts of North DFW, the conforming loan limit is $726,200 for a single-family home. Loans exceeding this amount are considered jumbo loans.",
+      },
+      {
+        q: "How much down payment do I need for a jumbo loan?",
+        a: "Down payment requirements vary but typically range from 10% to 25%. Many lenders prefer a 20% down payment for jumbo loans.",
+      },
+      {
+        q: "Can I use a jumbo loan to finance an investment property?",
+        a: "Yes. Jumbo loans are available for investment properties; however, requirements such as larger down payments and stricter underwriting usually apply.",
+      },
+      {
+        q: "Do jumbo loans have higher interest rates than conventional loans?",
+        a: "Generally, jumbo loans may have slightly higher interest rates due to increased lender risk, but top-qualified borrowers with strong credit profiles often secure competitive pricing.",
+      },
+      {
+        q: "How long does the jumbo loan approval process take?",
+        a: "Approval times vary by lender and borrower complexity but typically take 30 to 45 days. Working with a knowledgeable local lender can help speed up the process.",
+      },
+    ],
+    content: `
+<p>For high-net-worth homebuyers in North Dallas-Fort Worth, seeking luxury homes in premier neighborhoods such as Frisco, Prosper, Southlake, Westlake, and Celina, securing the right financing is crucial. Jumbo loans are a popular choice for these buyers, offering the ability to finance properties that exceed conventional loan limits. In this comprehensive 2026 guide, we explore everything you need to know about jumbo loans in North DFW, helping you navigate the homebuying process with confidence.</p>
+
+<h2>What Is a Jumbo Loan?</h2>
+
+<p>A jumbo loan is a type of mortgage that exceeds the conforming loan limits set by the Federal Housing Finance Agency (FHFA). These limits define the maximum loan amount that Fannie Mae and Freddie Mac can purchase or guarantee. For 2026, the conforming loan limit in most parts of North Texas is $726,200 for a single-family home, but many luxury homes in North DFW exceed this threshold, requiring jumbo financing.</p>
+
+<p>Jumbo loans are essential for financing high-value properties in upscale communities like Southlake or Westlake, where home prices regularly surpass conventional loan caps. Because jumbo loans are riskier for lenders, they often come with stricter credit requirements, higher down payments, and elevated interest rates compared to conventional loans. However, jumbo loans also offer several benefits for affluent buyers, including flexible property options and competitive terms for well-qualified borrowers. Explore all available <a href="/loans/">loan programs</a> to compare your options.</p>
+
+<h2>Benefits of Jumbo Loans for High-Net-Worth Buyers</h2>
+
+<p>Choosing a jumbo loan in North DFW provides distinct advantages for luxury homebuyers. First, jumbo loans enable the financing of premium homes in sought-after North DFW neighborhoods that exceed conventional limits. Many lenders also provide customizable loan options, including adjustable-rate mortgages (ARMs), fixed-rate loans, and interest-only options to meet sophisticated borrowers' needs.</p>
+
+<p>High-net-worth buyers with excellent credit and substantial assets often secure jumbo loans with interest rates that closely rival conventional loans. Some lenders offer portfolio jumbo loans tailored to unique financial situations, evaluating overall wealth rather than relying solely on traditional income verification. Experienced lenders in North DFW understand the local market and can expedite jumbo loan approvals for buyers who act quickly.</p>
+
+<h2>Key Jumbo Loan Requirements in North DFW</h2>
+
+<p>Lenders have specific requirements for jumbo loans, often stricter than those for conventional mortgages. Typical jumbo loan down payments range between 10% and 25%, with 20% being common for most borrowers. Most lenders require a credit score of 700 or higher, with top-tier borrowers often having scores exceeding 740. Jumbo loans usually have a maximum debt-to-income (DTI) ratio of around 43%, though exceptions exist for borrowers with significant assets.</p>
+
+<p>High-net-worth buyers must provide thorough documentation, including tax returns, bank statements, proof of assets, and employment verification. Lenders often require several months' worth of mortgage payments in reserves, demonstrating your ability to manage the loan in case of financial disruptions. Lenders may also evaluate your portfolio for investment properties or second homes differently, so it is vital to discuss your specific situation with an experienced loan officer who understands the North DFW luxury market.</p>
+
+<h2>Popular North DFW Neighborhoods for Jumbo Loan Buyers</h2>
+
+<p>North Dallas-Fort Worth boasts an array of upscale neighborhoods where jumbo loans are often necessary due to high property values. Southlake is known for its excellent schools, vibrant community, and extravagant custom homes, with many properties priced well above conventional loan limits. Westlake is a luxury enclave offering sprawling estates, golf course properties, and privacy, where high median home values make jumbo loans essential for buyers.</p>
+
+<p>Frisco is rapidly growing with upscale master-planned communities offering luxury homes with ample amenities that require specialty financing options. Prosper balances small-town appeal with modern luxury housing developments, often necessitating jumbo loan financing. Celina is known for large lots and custom homes, with an expanding luxury real estate market attracting buyers seeking jumbo loans for estate properties. Browse our <a href="/cities/">cities page</a> to learn more about local markets in each of these communities.</p>
+
+<h2>Choosing the Right Jumbo Loan Lender in North DFW</h2>
+
+<p>Selecting the right lender is critical when applying for a jumbo loan. High-net-worth buyers require lenders who not only provide competitive rates and terms but also understand the nuances of the North DFW luxury market. Work with lenders who have a strong track record in jumbo financing and can accommodate complex financial situations. A lender familiar with North Dallas-Fort Worth's high-end neighborhoods can provide tailored advice and faster approval processes.</p>
+
+<p>Given the size and complexity of jumbo loans, personalized attention from your loan officer is invaluable. Opt for lenders offering a variety of <a href="/loans/">loan programs</a> to match your financial goals, including options for investment properties, primary residences, and second homes. A lender who clearly explains costs, timelines, and requirements will help prevent surprises during the loan process. Partnering with a reputable lender like Loan Factory, Inc. — with expertise in jumbo loans and an eye on the North DFW market — can make your home financing journey smoother and more predictable.</p>
+
+<h2>Take the Next Step: Get Pre-Qualified for a Jumbo Loan Today</h2>
+
+<p>For affluent homebuyers in North Dallas-Fort Worth, a jumbo loan is often the gateway to owning an exquisite property in prestigious communities such as Frisco, Southlake, and Westlake. Understanding jumbo loan requirements, benefits, and lender selection criteria positions you for success in this competitive market.</p>
+
+<p>Ready to explore your jumbo loan options? <a href="/">Contact us today</a> for a personalized consultation and find out how a jumbo loan can unlock the door to your luxury North DFW home. Tony Botchev, NMLS #114198, and the team at Loan Factory, Inc. are here to guide you every step of the way.</p>
+
+<p><strong>Tony Botchev, NMLS #114198</strong> | Sponsored by Loan Factory, Inc. NMLS #320841 | Equal Housing Lender</p>
+    `,
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: "Jumbo Loans in North DFW: The 2026 Complete Guide",
+      datePublished: "2026-04-10",
+      dateModified: "2026-04-10",
+      author: { "@type": "Person", name: "Tony Botchev", identifier: "NMLS #114198" },
+      publisher: {
+        "@type": "Organization",
+        name: "DFW Homes & Loans",
+        logo: { "@type": "ImageObject", url: "https://www.dfwhome.loans/logo.png" },
+      },
+      description:
+        "Everything high-net-worth homebuyers need to know about jumbo loans in Frisco, Southlake, Westlake, Prosper, and Celina in 2026. Requirements, rates, and expert guidance.",
+      url: "https://www.dfwhome.loans/blog/jumbo-loans-north-dfw-2026",
+      mainEntityOfPage: "https://www.dfwhome.loans/blog/jumbo-loans-north-dfw-2026",
+      image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80",
+    },
+  },
+  {
     id: "first-time-homebuyer-guide-north-dfw-2026",
     slug: "first-time-homebuyer-guide-north-dfw-2026",
     title: "The Ultimate 2026 First-Time Homebuyer Guide for North DFW",

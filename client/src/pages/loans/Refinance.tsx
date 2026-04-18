@@ -83,7 +83,7 @@ export default function RefinancePage() {
               situation — and by how much.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/#contact" className="bg-[#C4521A] text-white px-6 py-3 font-semibold hover:bg-[#A8431A] transition-colors text-center">
+              <Link href="/#prequal" className="bg-[#C4521A] text-white px-6 py-3 font-semibold hover:bg-[#A8431A] transition-colors text-center">
                 Get a Refinance Quote →
               </Link>
               <a href="tel:+19453708656" className="flex items-center justify-center gap-2 border border-white/30 text-white px-6 py-3 font-semibold hover:bg-white/10 transition-colors">
@@ -136,7 +136,7 @@ export default function RefinancePage() {
         <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
           <h2 className="font-bebas text-4xl text-white mb-3">SEE IF REFINANCING MAKES SENSE</h2>
           <p className="text-white/70 mb-6">Tony will run the numbers honestly. No hard credit pull to start.</p>
-          <Link href="/#contact" className="inline-block bg-[#C4521A] text-white px-10 py-4 font-semibold text-lg hover:bg-[#A8431A] transition-colors">
+          <Link href="/#prequal" className="inline-block bg-[#C4521A] text-white px-10 py-4 font-semibold text-lg hover:bg-[#A8431A] transition-colors">
             Get a Refinance Quote →
           </Link>
           <p className="text-white/40 text-xs mt-4">Tony Botchev · NMLS #114198 · Loan Factory, Inc. NMLS #320841 · Equal Housing Lender</p>

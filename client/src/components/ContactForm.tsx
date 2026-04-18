@@ -1,12 +1,26 @@
 /* Kinetic Texas — Contact / Lead Form
    A2P compliant SMS consent
    Forest green background, split layout with DFW skyline
+   NOTE: This form is no longer rendered on the homepage (removed in Fix 3).
+   File kept for reference / potential future use.
 */
 import { useState } from "react";
 import { ArrowRight, CheckCircle, Phone, Mail, MessageCircle } from "lucide-react";
 import NMLSDisclosure from "@/components/NMLSDisclosure";
+import { trackLeadFormSubmit, trackPhoneClick, trackWhatsAppClick } from "@/lib/analytics";
 
 const DFW_SKYLINE = "https://d2xsxph8kpxj0f.cloudfront.net/310519663335597871/XWnvoWuu2r8GZzWNujZ6D6/dfw-skyline-gtKv8eV8bN7WLZt3RYSq3s.webp";
+
+// GHL Custom Field IDs (aligned with PreQualForm)
+const CF = {
+  loanPurpose:      "N1SdIoSQp1QY3GpQb8YF",   // TEXT
+  loanType:         "4j2o73jUu00rIrR95mwh",   // TEXT
+  creditScoreRange: "B5VYu7zxYa69UScFPdRP",   // SINGLE_OPTIONS
+  creditScore:      "HUk7yVEdXSMD7V5Y5EKP",   // TEXT
+  leadSource:       "GPqqpLvQBv2cxr0SM31k",   // TEXT
+  leadTemp:         "29sOCVVX7J9gHzMSwexh",   // TEXT
+  smsConsent:       "07qG13d3oMG2TLGnfL5V",   // CHECKBOX — must be ["Yes"]
+};
 
 type FormData = {
   firstName: string;
@@ -40,7 +54,7 @@ export default function ContactForm() {
   };
 
   // Lead scoring: HOT = 720+ credit + ready now, WARM = 680+ or 3-6mo, COLD = below 680 or 6mo+
-  const scoreLead = (creditScore: string, loanPurpose: string): { tags: string[]; temperature: string } => {
+  const scoreLead = (creditScore: string): { tags: string[]; temperature: string } => {
     const isHighCredit = creditScore === "760+" || creditScore === "720-759";
     const isMidCredit = creditScore === "680-719";
     if (isHighCredit) {
@@ -57,19 +71,13 @@ export default function ContactForm() {
     if (!form.smsConsent) return;
     setLoading(true);
 
-    const { tags } = scoreLead(form.creditScore, form.loanPurpose);
+    const { tags, temperature } = scoreLead(form.creditScore);
 
     try {
-      // Step 1: Create or update contact in GHL
-      const contactRes = await fetch("https://services.leadconnectorhq.com/contacts/", {
+      const res = await fetch("/api/ghl-submit", {
         method: "POST",
-        headers: {
-          "Authorization": "Bearer pit-b53e36a0-81dc-4311-80e1-2e409b8715d2",
-          "Version": "2021-07-28",
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          locationId: "4mO3eTmt4MzqY4CfnMGW",
           firstName: form.firstName,
           lastName: form.lastName,
           phone: form.phone,
@@ -77,42 +85,29 @@ export default function ContactForm() {
           tags,
           source: "dfwhome.loans website",
           customFields: [
-            { key: "loan_purpose", field_value: form.loanPurpose },
-            { key: "credit_score_range", field_value: form.creditScore },
-            { key: "sms_consent", field_value: form.smsConsent ? "Yes" : "No" },
+            { id: CF.loanPurpose,      value: form.loanPurpose },
+            { id: CF.loanType,         value: form.loanPurpose },
+            { id: CF.creditScoreRange, value: form.creditScore },
+            { id: CF.creditScore,      value: form.creditScore },
+            { id: CF.leadSource,       value: "Website Contact Form" },
+            { id: CF.leadTemp,         value: temperature },
+            { id: CF.smsConsent,       value: ["Yes"] },
           ],
+          opportunityName: `${form.firstName} ${form.lastName} - ${form.loanPurpose || "Inquiry"} Contact`,
         }),
       });
 
-      const contactData = await contactRes.json();
-      const contactId = contactData?.contact?.id;
-
-      // Step 2: Add to Mortgage Pipeline — New Lead stage
-      if (contactId) {
-        await fetch("https://services.leadconnectorhq.com/opportunities/", {
-          method: "POST",
-          headers: {
-            "Authorization": "Bearer pit-b53e36a0-81dc-4311-80e1-2e409b8715d2",
-            "Version": "2021-07-28",
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            pipelineId: "LDVnhpPD75zLj8I1Rfzs",
-            locationId: "4mO3eTmt4MzqY4CfnMGW",
-            name: `${form.firstName} ${form.lastName} — ${form.loanPurpose || "Inquiry"}`,
-            pipelineStageId: "de32f2b3-e94c-4956-8ef0-6a46f62ada3d",
-            status: "open",
-            contactId,
-            source: "dfwhome.loans website",
-          }),
-        });
+      if (!res.ok) {
+        throw new Error("Submission failed");
       }
 
       setSubmitted(true);
+      trackLeadFormSubmit('contact_form');
     } catch (err) {
       console.error("GHL submission error:", err);
       // Still show success to user — log the error
       setSubmitted(true);
+      trackLeadFormSubmit('contact_form');
     } finally {
       setLoading(false);
     }
@@ -135,7 +130,7 @@ export default function ContactForm() {
     >
       {/* Background skyline */}
       <div className="absolute inset-0">
-        <img src={DFW_SKYLINE} alt="" className="w-full h-full object-cover opacity-10" />
+        <img src={DFW_SKYLINE} alt="Dallas-Fort Worth skyline at sunset" className="w-full h-full object-cover opacity-10" loading="lazy" decoding="async" />
         <div className="absolute inset-0" style={{ background: "oklch(0.26 0.065 155 / 0.85)" }} />
       </div>
 
@@ -178,6 +173,10 @@ export default function ContactForm() {
                   target={item.href.startsWith("http") ? "_blank" : undefined}
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 group"
+                  onClick={() => {
+                    if (item.href.startsWith("tel:")) trackPhoneClick();
+                    if (item.href.includes("wa.me")) trackWhatsAppClick();
+                  }}
                 >
                   <div
                     className="w-10 h-10 flex items-center justify-center flex-shrink-0 transition-colors"
@@ -214,7 +213,7 @@ export default function ContactForm() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} noValidate>
+              <form onSubmit={handleSubmit} method="post" noValidate>
                 <div className="grid grid-cols-2 gap-6 mb-6">
                   <div>
                     <label className="font-['Outfit'] text-xs uppercase tracking-widest mb-2 block" style={{ color: "oklch(0.78 0.02 85)" }}>
@@ -335,9 +334,9 @@ export default function ContactForm() {
                     />
                     <span className="font-['Outfit'] text-xs leading-relaxed" style={{ color: "oklch(0.78 0.02 85)" }}>
                       By checking this box and submitting, I consent to receive SMS text messages from DFW Homes & Loans regarding my mortgage inquiry. Message frequency varies. Msg & data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. This consent is not required to obtain services.{" "}
-                      <a href="#" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Privacy Policy</a>{" "}
+                      <a href="/privacy" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Privacy Policy</a>{" "}
                       &{" "}
-                      <a href="#" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Terms of Service</a>
+                      <a href="/terms" className="underline" style={{ color: "oklch(0.62 0.16 42)" }}>Terms of Service</a>
                     </span>
                   </label>
                 </div>

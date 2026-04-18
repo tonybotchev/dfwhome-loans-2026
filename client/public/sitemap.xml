@@ -7,7 +7,7 @@
   <!-- Core pages -->
   <url>
     <loc>https://www.dfwhome.loans/</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -19,9 +19,15 @@
   </url>
   <url>
     <loc>https://www.dfwhome.loans/blog</loc>
-    <lastmod>2026-03-30</lastmod>
+    <lastmod>2026-04-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/cities</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.dfwhome.loans/privacy</loc>
@@ -79,8 +85,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Loan pages — Ranked AI additions -->
   <url>
     <loc>https://www.dfwhome.loans/loans/usda</loc>
     <lastmod>2026-04-08</lastmod>
@@ -88,7 +92,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- City pages -->
+  <!-- City pages — original -->
   <url>
     <loc>https://www.dfwhome.loans/cities/celina</loc>
     <lastmod>2026-03-30</lastmod>
@@ -144,7 +148,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- City pages — Ranked AI expansion -->
+  <!-- City pages — expansion -->
   <url>
     <loc>https://www.dfwhome.loans/cities/plano</loc>
     <lastmod>2026-04-08</lastmod>
@@ -204,6 +208,30 @@
   <url>
     <loc>https://www.dfwhome.loans/blog/dscr-loans-dfw-investors</loc>
     <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/blog/jumbo-loans-north-dfw-2026</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/blog/first-time-homebuyer-guide-north-dfw-2026</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/blog/va-loan-myths-dfw-2026</loc>
+    <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.dfwhome.loans/blog/va-loan-myths-texas</loc>
+    <lastmod>2026-04-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

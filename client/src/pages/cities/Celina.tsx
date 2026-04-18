@@ -82,8 +82,10 @@ export default function CelinaPage() {
         <div className="absolute inset-0 opacity-10">
           <img
             src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600&q=60"
-            alt=""
+            alt="Homes and real estate in Celina, Texas"
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10 items-center">
@@ -101,7 +103,7 @@ export default function CelinaPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <Link
-                href="/#contact"
+                href="/#prequal"
                 className="bg-[#C4521A] text-white px-6 py-3 font-semibold hover:bg-[#A8431A] transition-colors text-center"
               >
                 Get Pre-Qualified Free →
@@ -315,7 +317,7 @@ export default function CelinaPage() {
             Tony Botchev knows Celina — and he'll get you to the closing table.
           </p>
           <Link
-            href="/#contact"
+            href="/#prequal"
             className="inline-block bg-[#C4521A] text-white px-10 py-4 font-semibold text-lg hover:bg-[#A8431A] transition-colors"
           >
             Get Pre-Qualified Free →

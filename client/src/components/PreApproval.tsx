@@ -56,6 +56,8 @@ export default function PreApproval() {
                 src={TEXAS_HOME}
                 alt="Modern farmhouse home in Celina Texas"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               {/* Overlay tag */}
               <div
@@ -121,7 +123,7 @@ export default function PreApproval() {
             </div>
 
             <button
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" })}
               className="btn-primary-kt text-sm px-8 py-3 mt-8"
             >
               <span className="flex items-center gap-2">

@@ -4,6 +4,7 @@
 */
 import { useRef, useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useMobile";
 
 const loans = [
   {
@@ -100,6 +101,8 @@ const loans = [
 
 function LoanCard({ loan, index }: { loan: typeof loans[0]; index: number }) {
   const [visible, setVisible] = useState(false);
+  const [flipped, setFlipped] = useState(false);
+  const isMobile = useIsMobile();
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -112,20 +115,21 @@ function LoanCard({ loan, index }: { loan: typeof loans[0]; index: number }) {
   }, []);
 
   const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div
       ref={ref}
       className="card-flip-container h-64"
+      onClick={() => isMobile && setFlipped((f) => !f)}
       style={{
         opacity: visible ? 1 : 0,
         transform: visible ? "none" : "translateY(30px)",
         transition: `opacity 0.5s ease ${index * 0.08}s, transform 0.5s ease ${index * 0.08}s`,
       }}
     >
-      <div className="card-flip-inner">
+      <div className={`card-flip-inner${isMobile && flipped ? " flipped" : ""}`}>
         {/* Front */}
         <div
           className="card-flip-front rounded-none p-7 flex flex-col justify-between border"
@@ -164,7 +168,7 @@ function LoanCard({ loan, index }: { loan: typeof loans[0]; index: number }) {
               className="font-['Outfit'] text-xs uppercase tracking-widest"
               style={{ color: "oklch(0.62 0.16 42)" }}
             >
-              Hover for details →
+              {isMobile ? "Tap for details →" : "Hover for details →"}
             </span>
           </div>
         </div>
@@ -283,7 +287,7 @@ export default function LoanPrograms() {
         {/* Bottom CTA */}
         <div className="mt-12 text-center">
           <button
-            onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+            onClick={() => document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" })}
             className="btn-primary-kt text-base px-10 py-4"
           >
             <span className="flex items-center gap-2">

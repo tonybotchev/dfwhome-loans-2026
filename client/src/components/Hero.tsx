@@ -5,6 +5,7 @@
 */
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, Zap, Shield, Clock } from "lucide-react";
+import { trackPhoneClick } from "@/lib/analytics";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663335597871/XWnvoWuu2r8GZzWNujZ6D6/hero-bg-kY8xHYiRAvj6YQMU4weL7q.webp";
 
@@ -31,7 +32,11 @@ export default function Hero() {
   }, []);
 
   const scrollToContact = () => {
-    document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#prequal")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToBooking = () => {
+    document.querySelector("#book-call")?.scrollIntoView({ behavior: "smooth" });
   };
 
   const stats = [
@@ -49,6 +54,8 @@ export default function Hero() {
           src={HERO_BG}
           alt="North DFW luxury neighborhood aerial view"
           className="w-full h-full object-cover"
+          loading="eager"
+          decoding="async"
         />
         {/* Dark overlay gradient */}
         <div
@@ -148,14 +155,15 @@ export default function Hero() {
               transition: "opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s",
             }}
           >
-            <button onClick={scrollToContact} className="btn-primary-kt text-base px-8 py-4">
+            <button onClick={scrollToBooking} className="btn-primary-kt text-base px-8 py-4">
               <span className="flex items-center gap-2">
-                Get Pre-Qualified Free <ArrowRight size={16} />
+                Book a Free Consultation <ArrowRight size={16} />
               </span>
             </button>
             <a
               href="tel:+19453708656"
               className="btn-outline-kt text-base px-8 py-4"
+              onClick={() => trackPhoneClick()}
             >
               ☎ (945) 370-8656
             </a>
